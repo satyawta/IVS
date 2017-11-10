@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IVS</string>
+    <string name="indian_vedic_school">Indian Vedic School</string>
+    <string name="john_doe_gmail_com">john.doe@gmail.com</string>
+    <string name="_1_234_5678_910">+1 234 5678 910</string>
+    <string name="john_doe">John Doe</string>
+    <string name="register">Register</string>
+    <string name="don_t_have_an_account_register">Don’t have an account? Register</string>
+    <string name="or_with">------ Or With ------</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="todo">TODO</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_top_padding">34.7dp</dimen>
+    <dimen name="image_bottom_padding">15.7dp</dimen>
+    <dimen name="edit_bottom_padding">17dp</dimen>
+    <dimen name="edit_top_padding">17dp</dimen>
+    <dimen name="button_top_padding">26.3dp</dimen>
+    <dimen name="button_down_padding">32dp</dimen>
+    <dimen name="padding_image_bottom">39dp</dimen>
+    <dimen name="letter_spacing">0.03</dimen>
+    <dimen name="textbox_height">53.3dp</dimen>
+    <dimen name="textbox_width">306.7dp</dimen>
+</resources>

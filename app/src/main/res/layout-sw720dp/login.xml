@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo"
+            android:paddingTop="@dimen/image_top_padding"
+            android:paddingBottom="@dimen/image_bottom_padding"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="@dimen/image_bottom_padding"
+            android:paddingBottom="39dp"
+            android:letterSpacing="-0.03"
+            android:textColor="#000000"
+            android:textSize="26.3sp"
+            android:text="@string/indian_vedic_school"
+            tools:ignore="UnusedAttribute" />
+
+        <EditText
+            android:layout_width="@dimen/textbox_width"
+            android:layout_height="@dimen/textbox_height"
+            android:id="@+id/email"
+            android:text="@string/john_doe_gmail_com"
+            android:layout_marginTop="@dimen/edit_top_padding"
+            android:textAlignment="center"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/title"
+            android:background="@drawable/border_for_textbox" />
+
+        <EditText
+            android:layout_width="@dimen/textbox_width"
+            android:layout_height="@dimen/textbox_height"
+            android:id="@+id/loginpassword"
+            android:text="@string/john_doe"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/edit_top_padding"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/email"
+            android:background="@drawable/border_for_textbox" />
+
+
+        <Button
+            android:layout_width="@dimen/textbox_width"
+            android:layout_height="@dimen/textbox_height"
+            android:textSize="20sp"
+            android:id="@+id/login"
+            android:text="@string/login"
+            android:layout_marginTop="@dimen/edit_top_padding"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:layout_below="@+id/loginpassword"
+            android:background="@drawable/custom_button_drawable" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15.8sp"
+            android:id="@+id/forgetpassword"
+            android:textColor="#9b9b9b"
+            android:layout_below="@+id/login"
+            android:layout_centerHorizontal="true"
+            android:text="@string/forgot_password" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:id="@+id/optional"
+            android:textColor="#80000000"
+            android:layout_below="@+id/forgetpassword"
+            android:letterSpacing="0.03"
+            android:paddingTop="32.7dp"
+            android:paddingBottom="21.7dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/or_with"
+            tools:ignore="UnusedAttribute" />
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/facebooklogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/login"
+            android:layout_alignStart="@+id/login"
+            android:layout_below="@+id/optional"
+            android:paddingTop="21.7dp" />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/login"
+            android:layout_alignRight="@+id/login"
+            android:layout_below="@+id/optional" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15.8sp"
+            android:id="@+id/register"
+            android:paddingTop="25.3dp"
+            android:textColor="#252525"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/facebooklogin"
+            android:textStyle="bold"
+            android:text="@string/don_t_have_an_account_register"
+            android:paddingBottom="29dp" />
+    </RelativeLayout>
+</ScrollView>
