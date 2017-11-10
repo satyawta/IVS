@@ -10,4 +10,5 @@
     <dimen name="letter_spacing">0.03</dimen>
     <dimen name="textbox_height">53.3dp</dimen>
     <dimen name="textbox_width">306.7dp</dimen>
+    <dimen name="onboarding_text">15.3sp</dimen>
 </resources>
