@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="paddint_top_teacher_profile" type="dimen" format="float">8.7dp</item>
+    <item name="reviews_count_left_margin" type="dimen" format="float">27.3dp</item>
+</resources>

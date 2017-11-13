@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logo"
+        android:paddingTop="@dimen/image_top_padding"
+        android:paddingBottom="@dimen/image_bottom_padding"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/title"
+        android:fontFamily="@font/arlrdbd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/image_bottom_padding"
+        android:letterSpacing="-0.03"
+        android:textColor="#000000"
+        android:textSize="26.3sp"
+        android:text="@string/indian_vedic_school"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13.7sp"
+        android:layout_below="@+id/title"
+        android:id="@+id/reset_password_text"
+        android:gravity="center"
+        android:fontFamily="@font/helveticaneueltstd_lt"
+        android:paddingTop="50.7dp"
+        android:paddingBottom="18dp"
+        android:textColor="#252525"
+        android:letterSpacing="0.03"
+        android:layout_centerInParent="true"
+        tools:text="@string/reset_successful" />
+
+    <ImageView
+        android:layout_width="87.3dp"
+        android:layout_height="87.3dp"
+        android:id="@+id/image_success"
+        android:layout_below="@id/reset_password_text"
+        android:src="@drawable/success"
+        android:padding="23dp"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:layout_width="@dimen/textbox_width"
+        android:layout_height="@dimen/textbox_height"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:id="@+id/login_now"
+        android:textAllCaps="false"
+        android:text="@string/login_now"
+        android:fontFamily="@font/helveticaneueltstd_md"
+        android:layout_marginTop="37dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:layout_below="@+id/image_success"
+        android:background="@drawable/custom_button_drawable" />
+
+
+</RelativeLayout>

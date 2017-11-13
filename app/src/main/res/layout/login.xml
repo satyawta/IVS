@@ -21,6 +21,7 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/arlrdbd"
             android:layout_height="wrap_content"
             android:layout_below="@+id/logo"
             android:layout_centerHorizontal="true"
@@ -63,6 +64,8 @@
             android:layout_width="@dimen/textbox_width"
             android:layout_height="@dimen/textbox_height"
             android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
             android:id="@+id/login"
             android:text="@string/login"
             android:layout_marginTop="@dimen/edit_top_padding"
@@ -101,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/login"
             android:layout_alignStart="@+id/login"
-            android:layout_below="@+id/optional"
+            android:layout_alignTop="@+id/googleplus"
             android:paddingTop="21.7dp" />
 
         <com.google.android.gms.common.SignInButton

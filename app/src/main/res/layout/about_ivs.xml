@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logo_about"
+            android:paddingTop="@dimen/image_top_padding"
+            android:paddingBottom="@dimen/image_bottom_padding"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/title_about"
+            android:fontFamily="@font/arlrdbd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo_about"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="@dimen/image_bottom_padding"
+            android:paddingBottom="35.7dp"
+            android:letterSpacing="-0.03"
+            android:textColor="#000000"
+            android:textSize="26.3sp"
+            android:text="@string/indian_vedic_school"
+            tools:ignore="UnusedAttribute" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15.3sp"
+            android:id="@+id/about"
+            android:layout_below="@+id/title_about"
+            android:textColor="#363535"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="0.7dp"
+            android:lineSpacingMultiplier="1.5"
+            android:layout_marginLeft="34.7dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/about_ivs" />
+
+    </RelativeLayout>
+</ScrollView>

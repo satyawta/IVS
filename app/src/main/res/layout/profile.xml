@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/image_circle"
+        android:src="@drawable/profile_pic"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/username"
+        android:fontFamily="@font/helveticaneueltstd_md"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#393939"
+        android:textSize="22.1sp"
+        android:text="@string/username"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="19dp"
+        tools:ignore="UnusedAttribute" />
+
+    <EditText
+        android:layout_width="315.7dp"
+        android:layout_height="0.7dp"
+        android:hint="@string/username"
+        android:id="@+id/username_profile"
+        android:inputType="text"
+        android:text="@string/user_email"
+        android:layout_below="@+id/username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="108.7dp" />
+
+    <EditText
+        android:layout_width="315.7dp"
+        android:layout_height="0.7dp"
+        android:inputType="textPassword"
+        android:text="@string/user_password"
+        android:id="@+id/username_password"
+        android:layout_below="@+id/username_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67.7dp" />
+
+    <EditText
+        android:layout_width="315.7dp"
+        android:layout_height="0.7dp"
+        android:inputType="number"
+        android:text="@string/user_phno"
+        android:id="@+id/username_phno"
+        android:layout_below="@+id/username_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67.7dp" />
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16.6sp"
+        android:fontFamily="@font/helveticaneueltstd_lt"
+        android:layout_below="@id/username_phno"
+        android:textColor="#ff8635"
+        android:layout_centerHorizontal="true"
+        android:text="@string/log_out"
+        android:layout_marginTop="87dp"
+        android:layout_marginBottom="47.7dp"
+        tools:ignore="UnusedAttribute" />
+
+</RelativeLayout>

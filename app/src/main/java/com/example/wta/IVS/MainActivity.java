@@ -8,13 +8,11 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText email, password;
-    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.teacher_profile_course);
     }
 
 

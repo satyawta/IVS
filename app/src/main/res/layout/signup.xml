@@ -20,6 +20,7 @@
 
         <TextView
             android:id="@+id/title"
+            android:fontFamily="@font/arlrdbd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/logo"
@@ -100,6 +101,8 @@
             android:layout_width="@dimen/textbox_width"
             android:layout_height="@dimen/textbox_height"
             android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
             android:text="@string/register"
             android:layout_marginTop="@dimen/edit_top_padding"
             android:layout_centerHorizontal="true"
