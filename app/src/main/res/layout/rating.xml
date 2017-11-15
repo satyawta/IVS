@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rating"
+        android:text="Rate this Instructor"
+        android:layout_marginBottom="27dp"
+        android:layout_marginLeft="29.7dp"
+        android:fontFamily="@font/helveticaneueltstd_md"
+        android:layout_marginTop="30.7dp" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/instructor_rating"
+        android:layout_below="@+id/rating" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/close"
+        android:layout_marginTop="19.3dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="19.3dp"
+        android:layout_marginLeft="298.3dp"
+        android:src="@drawable/cancel_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23.8sp"
+        android:id="@+id/rating-number"
+        android:layout_below="@+id/instructor_rating"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textColor="#ff7d37"
+        android:text="@string/rating_number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12.1sp"
+        android:id="@+id/rating_type"
+        android:layout_below="@id/rating-number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9.7dp"
+        android:textColor="#393939"
+        android:letterSpacing="0.02"
+        android:text="Good" />
+
+    <TextView
+        android:id="@+id/next_rating"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36.3dp"
+        android:layout_below="@id/rating_type"
+        android:background="@drawable/custom_button_drawable"
+        android:layout_width="328.7dp"
+        android:gravity="center"
+        android:layout_height="52.3dp"
+        android:textSize="15.5sp"
+        android:textColor="#ffffff"
+        android:text="Next" />
+
+</RelativeLayout>

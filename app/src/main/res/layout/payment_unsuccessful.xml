@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_unsuccess_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64.7dp"
+        android:src="@drawable/group_32"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/payment_unsucess"
+        android:fontFamily="@font/arlrdbd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_unsuccess_payment"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="42.7dp"
+        android:letterSpacing="-0.03"
+        android:textColor="#000000"
+        android:textSize="26.3sp"
+        android:text="@string/payment_unsuccessfull"
+        tools:ignore="UnusedAttribute" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18.7sp"
+        android:id="@+id/amount"
+        android:paddingTop="24dp"
+        android:paddingBottom="13dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/payment_unsucess"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="@string/total_amount_2_350" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18.7sp"
+        android:textColor="#000000"
+        android:paddingTop="13dp"
+        android:id="@+id/courses"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/amount"
+        android:gravity="center_horizontal"
+        android:text="@string/courses" />
+
+    <Button
+        android:layout_width="@dimen/textbox_width"
+        android:layout_height="@dimen/textbox_height"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:id="@+id/view_course"
+        android:textAllCaps="false"
+        android:text="@string/try_again"
+        android:fontFamily="@font/helveticaneueltstd_md"
+        android:layout_marginTop="37dp"
+        tools:ignore="UnusedAttribute"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:layout_below="@+id/courses"
+        android:background="@drawable/custom_button_drawable" />
+</RelativeLayout>

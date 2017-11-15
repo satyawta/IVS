@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/landingframe"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/landingscreen_image"
+            android:src="@drawable/books"
+            android:paddingTop="15.7dp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="32.3dp"
+            android:layout_marginRight="94dp"
+            android:fontFamily="@font/helveticaneueltstd_lt"
+            android:text="@string/welcome_user"
+            android:textColor="#ffffff"
+            android:textSize="15.5sp"
+            android:layout_marginStart="32.3dp"
+            android:layout_marginEnd="94dp"
+            tools:ignore="RtlHardcoded" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/landingcourses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/landingframe"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="27dp"
+        android:text="@string/our_courses"
+        android:textColor="#252525"
+        android:textSize="15.5sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="7.7dp"
+        android:layout_height="7.7dp"
+        android:layout_alignEnd="@+id/landingframe"
+        android:layout_alignRight="@+id/landingframe"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/indicator_selected" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="7.7dp"
+        android:layout_height="7.7dp"
+        android:layout_above="@+id/coursename_landing"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:src="@drawable/indicator_selected" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="7.7dp"
+        android:layout_height="7.7dp"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/imageView3"
+        android:layout_toRightOf="@+id/imageView3"
+        android:src="@drawable/indicator_selected" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/courseimage"
+        android:src="@drawable/layer_3"
+        android:layout_below="@id/landingcourses"
+        android:paddingTop="29dp"
+        android:paddingLeft="15.7dp" />
+
+    <TextView
+        android:id="@+id/coursename_landing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/landingcourses"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/courseimage"
+        android:layout_toRightOf="@+id/courseimage"
+        android:text="Vedas"
+        android:textColor="#252525"
+        android:textSize="22.1sp" />
+
+    <TextView
+        android:id="@+id/rating_landing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/coursename_landing_1"
+        android:layout_alignEnd="@+id/imageView4"
+        android:layout_alignRight="@+id/imageView4"
+        android:background="@drawable/custom_rectangle_drawable"
+        android:paddingBottom="10dp"
+        android:paddingEnd="9.7dp"
+        android:paddingLeft="10.3dp"
+        android:paddingRight="9.7dp"
+        android:paddingStart="10.3dp"
+        android:paddingTop="9.7dp"
+        android:text="4.2"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/starting_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/langugaetype"
+        android:layout_alignLeft="@+id/rating_landing"
+        android:layout_alignStart="@+id/rating_landing"
+        android:textColor="#252525"
+        android:textSize="6.6sp"
+        android:text="@string/starting_from" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/langugaetype"
+        android:layout_alignLeft="@+id/coursename_landing"
+        android:layout_alignStart="@+id/coursename_landing"
+        android:layout_alignTop="@+id/language_type_english"
+        android:textColor="#252525"
+        android:textSize="8.8sp"
+        android:text="Languages: " />
+
+    <TextView
+        android:id="@+id/language_type_english"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/coursename_landing"
+        android:layout_alignRight="@+id/coursename_landing"
+        android:layout_below="@+id/coursename_landing"
+        android:layout_marginTop="39.3dp"
+        android:textColor="#252525"
+        android:textSize="8sp"
+        android:text="E" />
+
+    <TextView
+        android:id="@+id/langugae_type_telugu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3.7dp"
+        android:layout_toEndOf="@+id/language_type_english"
+        android:layout_toRightOf="@+id/language_type_english"
+        android:layout_marginStart="3.7dp"
+        android:layout_alignBaseline="@+id/language_type_english"
+        android:layout_alignBottom="@+id/language_type_english"
+        android:layout_centerHorizontal="true"
+        android:textColor="#252525"
+        android:textSize="8sp"
+        android:text="T" />
+
+    <TextView
+        android:id="@+id/langugae_type_hindi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/langugae_type_telugu"
+        android:layout_alignBottom="@+id/langugae_type_telugu"
+        android:layout_marginLeft="3.7dp"
+        android:layout_marginStart="3.7dp"
+        android:layout_toEndOf="@+id/langugae_type_telugu"
+        android:layout_toRightOf="@+id/langugae_type_telugu"
+        android:textColor="#252525"
+        android:textSize="8sp"
+        android:text="H" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/courseimage"
+        android:layout_alignLeft="@+id/langugaetype"
+        android:layout_alignStart="@+id/langugaetype"
+        android:textColor="#252525"
+        android:textSize="8.8sp"
+        android:text="@string/course_time" />
+
+    <TextView
+        android:id="@+id/course_price_landing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/starting_from"
+        android:layout_alignRight="@+id/starting_from"
+        android:layout_alignTop="@+id/textView4"
+        android:textColor="#252525"
+        android:textSize="12.1sp"
+        android:text="@string/cost" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/courseimage_1"
+        android:src="@drawable/group_17"
+        android:layout_below="@id/courseimage"
+        android:paddingTop="29dp"
+        android:paddingLeft="15.7dp" />
+
+    <TextView
+        android:id="@+id/coursename_landing_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/courseimage_1"
+        android:layout_toRightOf="@+id/courseimage_1"
+        android:text="@string/coursename"
+        android:textColor="#252525"
+        android:textSize="22.1sp" />
+
+    <TextView
+        android:id="@+id/rating_landing_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/language_type_english"
+        android:layout_alignEnd="@+id/imageView4"
+        android:layout_alignRight="@+id/imageView4"
+        android:background="@drawable/custom_rectangle_drawable"
+        android:paddingBottom="10dp"
+        android:paddingEnd="9.7dp"
+        android:paddingLeft="10.3dp"
+        android:paddingRight="9.7dp"
+        android:paddingStart="10.3dp"
+        android:paddingTop="9.7dp"
+        android:text="@string/review_value"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/starting_from_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/language_type_english_1"
+        android:layout_alignEnd="@+id/course_price_landing"
+        android:layout_alignRight="@+id/course_price_landing"
+        android:textColor="#252525"
+        android:textSize="6.6sp"
+        android:text="@string/starting_from" />
+
+    <TextView
+        android:id="@+id/langugaetype_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/courseimage_1"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginBottom="16dp"
+        android:textColor="#252525"
+        android:textSize="8.8sp"
+        android:text="Languages: " />
+
+    <TextView
+        android:id="@+id/language_type_english_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/langugaetype_1"
+        android:layout_alignBottom="@+id/langugaetype_1"
+        android:layout_toLeftOf="@+id/langugae_type_telugu"
+        android:layout_toStartOf="@+id/langugae_type_telugu"
+        android:textColor="#252525"
+        android:textSize="8sp"
+        android:text="E" />
+
+    <TextView
+        android:id="@+id/langugae_type_telugu_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/langugae_type_hindi_1"
+        android:layout_alignBottom="@+id/langugae_type_hindi_1"
+        android:layout_alignEnd="@+id/langugae_type_telugu"
+        android:layout_alignLeft="@+id/langugae_type_telugu"
+        android:layout_alignRight="@+id/langugae_type_telugu"
+        android:layout_alignStart="@+id/langugae_type_telugu"
+        android:textColor="#252525"
+        android:textSize="8sp"
+        android:text="T" />
+
+    <TextView
+        android:id="@+id/langugae_type_hindi_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/langugae_type_hindi"
+        android:layout_alignLeft="@+id/langugae_type_hindi"
+        android:layout_alignRight="@+id/langugae_type_hindi"
+        android:layout_alignStart="@+id/langugae_type_hindi"
+        android:layout_alignTop="@+id/starting_from_1"
+        android:textColor="#252525"
+        android:textSize="8sp"
+        android:text="H" />
+
+    <TextView
+        android:id="@+id/textView4_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/coursename_landing_1"
+        android:layout_alignStart="@+id/coursename_landing_1"
+        android:layout_alignTop="@+id/course_price_landing_1"
+        android:textColor="#252525"
+        android:textSize="8.8sp"
+        android:text="@string/course_time" />
+
+    <TextView
+        android:id="@+id/course_price_landing_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/starting_from_1"
+        android:layout_alignRight="@+id/starting_from_1"
+        android:layout_below="@+id/langugae_type_hindi_1"
+        android:textColor="#252525"
+        android:textSize="12.1sp"
+        android:text="INR 3,000" />
+
+</RelativeLayout>

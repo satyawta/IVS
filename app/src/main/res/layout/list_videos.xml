@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/videofragment">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/video_thumbnail"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="21.3dp"
+            android:src="@drawable/recatangle_1250" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            android:src="@drawable/lock_6" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="9.9sp"
+        android:textColor="#7a7a7a"
+        android:id="@+id/classnumber_video_lock"
+        android:text="Class 1"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@id/videofragment" />
+
+    <TextView
+        android:id="@+id/class1name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/classnumber_video_lock"
+        android:layout_alignStart="@+id/classnumber_video_lock"
+        android:layout_below="@+id/classnumber_video_lock"
+        android:text="@string/class1_name"
+        android:textColor="#000000"
+        android:textSize="15.5sp" />
+
+    <ImageView
+        android:id="@+id/camera_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.7dp"
+        android:layout_marginLeft="19.7dp"
+        android:layout_below="@+id/class1name"
+        android:layout_toRightOf="@id/videofragment"
+        android:src="@drawable/video_camera_512" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="9.9sp"
+        android:layout_marginTop="15.7dp"
+        android:layout_below="@id/class1name"
+        android:layout_toRightOf="@id/camera_icon"
+        android:textColor="#000000"
+        android:layout_marginLeft="5.3dp"
+        android:letterSpacing="0.1"
+        android:text="@string/class_duration" />
+
+</RelativeLayout>

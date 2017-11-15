@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/write_review"
+        android:textSize="15.5sp"
+        android:textColor="#2b2b2b"
+        android:layout_marginTop="30.7dp"
+        android:layout_marginLeft="28.3dp"
+        android:text="Write a short review" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cancel_small"
+        android:id="@+id/cancel_review"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="130.3dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/write_review"
+        android:layout_centerHorizontal="true"
+        android:hint="Tell us what you think"
+        android:textAlignment="textStart"
+        android:layout_marginTop="14dp"
+        android:layout_gravity="start"
+        android:id="@+id/editText" />
+
+    <TextView
+        android:id="@+id/submit_review"
+        android:layout_width="328.7dp"
+        android:layout_height="52.3dp"
+        android:textColor="#fff"
+        android:fontFamily="@font/helveticaneueltstd_md"
+        android:gravity="center"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32.7dp"
+        android:background="@drawable/custom_button_drawable"
+        android:text="@string/submit" />
+</RelativeLayout>

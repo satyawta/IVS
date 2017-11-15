@@ -24,6 +24,7 @@
     <string name="reset_successful">We have successfully \n reset your password</string>
     <string name="login_now">Login Now</string>
     <string name="payment_successfull">Payment Successfull</string>
+    <string name="payment_unsuccessfull">Payment Unsuccessful</string>
     <string name="txn_code_value">#123489</string>
     <string name="courses">Course: Mantras, Tantras \n and Yantras</string>
     <string name="view_course">View Course</string>
@@ -50,5 +51,16 @@
     <string name="videos_title">Videos</string>
     <string name="videos_count">22 Videos </string>
     <string name="class1_name">Kundalani 1 The Vital \n force introduction</string>
+    <string name="courseprice">Course Price</string>
+    <string name="welcome_user">Welcome \n  MANISH SURAPANENI \n Start Taking Courses!</string>
+    <string name="our_courses">Our Courses</string>
+    <string name="course_time">Course Duration: 3 Months</string>
+    <string name="starting_from">Starting from</string>
+    <string name="cost">INR 2,000</string>
+    <string name="class_duration">03:45</string>
+    <string name="try_again">Try Again</string>
+    <string name="total_amount_2_350">Total Amount: 2,350</string>
+    <string name="rating_number">2.9</string>
+    <string name="submit">Submit</string>
 
 </resources>
