@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_course_video"
+            android:layout_width="match_parent"
+            android:layout_height="180.7dp"
+            android:layout_gravity="center"
+            android:src="@drawable/videos_frame" />
+
+        <View
+            android:id="@+id/course_video_top"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_below="@+id/image_course_video"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22.7dp" />
+
+        <TextView
+            android:id="@+id/about_course_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/course_video_top"
+            android:layout_marginLeft="65.7dp"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="0.7sp"
+            android:paddingTop="16.3dp"
+            android:text="About"
+            android:textColor="#363535"
+            android:textSize="15.3sp" />
+
+        <TextView
+            android:id="@+id/about_Videos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/about_course_video"
+            android:layout_below="@+id/course_video_top"
+            android:layout_marginLeft="239dp"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="0.7sp"
+            android:paddingRight="77.7dp"
+            android:paddingTop="16.3dp"
+            android:text="@string/videos_title"
+            android:textColor="#363535"
+            android:textSize="15.3sp" />
+
+        <View
+            android:id="@+id/course_video_bottom"
+            android:layout_width="359.3dp"
+            android:layout_height="2.3dp"
+            android:layout_below="@+id/about_Videos"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22.7dp" />
+
+        <FrameLayout
+            android:id="@+id/video_play_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/course_video_bottom">
+
+            <ImageView
+                android:id="@+id/videoimage"
+                android:layout_width="131.3dp"
+                android:layout_height="76.3dp"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="21.3dp"
+                android:src="@drawable/video_thumbnail" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal|center_vertical|center"
+                android:src="@drawable/play_button" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/classnumber_video_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/course_video_bottom"
+            android:layout_marginTop="21dp"
+            android:layout_toEndOf="@+id/video_play_course"
+            android:layout_toRightOf="@+id/video_play_course"
+            android:paddingLeft="19dp"
+            android:text="Class 1"
+            android:textColor="#7a7a7a"
+            android:textSize="9.9sp" />
+
+        <TextView
+            android:id="@+id/classname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/classnumber_video_course"
+            android:layout_marginTop="8.7dp"
+            android:layout_toEndOf="@+id/video_play_course"
+            android:layout_toRightOf="@+id/video_play_course"
+            android:paddingLeft="19dp"
+            android:text="@string/class1_name"
+            android:textColor="#000000"
+            android:textSize="15.5sp" />
+
+        <ImageView
+            android:id="@+id/videoplay_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/classname"
+            android:layout_marginTop="16.7dp"
+            android:layout_toEndOf="@+id/video_play_course"
+            android:layout_toRightOf="@+id/video_play_course"
+            android:paddingLeft="19dp"
+            android:src="@drawable/video_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/video_play_course"
+            android:layout_centerHorizontal="true"
+            android:letterSpacing="0.1"
+            android:text="03:45"
+            android:textColor="#000000"
+            android:textSize="9.9sp" />
+
+    </RelativeLayout>
+</ScrollView>
