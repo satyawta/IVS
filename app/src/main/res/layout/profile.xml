@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:background="@drawable/image_circle"
+        android:background="@drawable/demo"
         android:src="@drawable/profile_pic" />
 
     <TextView
