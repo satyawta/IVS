@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wta.IVS.onboarding">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/navigation">
+
+        <Button
+            android:layout_width="165.3dp"
+            android:layout_height="46.7dp"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:fontFamily="@font/montserrat_semibold"
+            android:id="@+id/onboarding_button"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="29.3dp"
+            android:layout_marginTop="40.3dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="15.3sp"
+            android:background="@drawable/custom_button_drawable"
+            android:textColor="#ffffff" />
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/onboarding_button"
+            android:id="@+id/pager" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -3,15 +3,23 @@
     package="com.example.wta.IVS">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:fullBackupContent="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.wta.IVS.MainActivity">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_application_id" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +27,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".OnboardingFragment1" />
+        <activity android:name=".OnboardingFragment2" />
+        <activity android:name=".OnboardingFragment3" />
+        <activity android:name=".Login" />
+        <activity android:name=".landingscreen"></activity>
+        <activity android:name=".teacher_pay_course"></activity>
+        <activity android:name=".payment_successful" />
+        <activity android:name=".payment" />
+        <activity android:name=".payment_teacher_videos" />
+        <activity android:name=".payment_unsuccessful" />
+        <activity android:name=".payment_teacher_course" />
     </application>
 
 </manifest>

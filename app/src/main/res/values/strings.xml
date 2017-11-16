@@ -31,6 +31,7 @@
     <string name="log_out">Log Out</string>
     <string name="user_email">manish@wtastudios.com</string>
     <string name="user_password">*********</string>
+    <string name="facebook_application_id">690757684412895</string>
     <string name="user_phno">+91 9652521125</string>
     <string name="terms_conditions">1. The agreement also includes a clause that reserves its right to suspend overdue accounts. \n 2. This can be incredibly important for a SaaS app so that its rights to take action against non-paying customers are maintained and reserved, as well as made known to the customers.</string>
     <string name="coursename">Mantra, Tantra \n and Yantra</string>
@@ -43,6 +44,9 @@
     <string name="language">Language: Telugu</string>
     <string name="course_duration">3 Months</string>
     <string name="rating">3.4 Rating</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="action_settings">settings</string>
     <string name="reviews_count">23 reviews</string>
     <string name="course_count">4 Courses</string>
     <string name="review_value">3.8</string>
@@ -62,5 +66,6 @@
     <string name="total_amount_2_350">Total Amount: 2,350</string>
     <string name="rating_number">2.9</string>
     <string name="submit">Submit</string>
+    <string name="next">Next</string>
 
 </resources>

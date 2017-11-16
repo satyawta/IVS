@@ -278,6 +278,7 @@
             android:gravity="center_horizontal"
             android:letterSpacing="0.03"
             android:padding="12dp"
+            android:id="@+id/payment_buy"
             android:text="Buy Now"
             android:textColor="#ffffff"
             android:textSize="15.8sp" />

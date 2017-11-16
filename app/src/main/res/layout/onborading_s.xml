@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/onboarding_s"
+        android:scaleType="fitXY"
+        android:src="@drawable/onboarding_s_nv" />
+
+    <Button
+        android:layout_width="165.3dp"
+        android:layout_height="46.7dp"
+        android:layout_gravity="bottom|start"
+        android:text="@string/get_started"
+        android:textAllCaps="false"
+        android:fontFamily="@font/montserrat_semibold"
+        android:id="@+id/onboarding_button_started"
+        android:layout_marginStart="30.3dp"
+        android:layout_marginLeft="30.3dp"
+        android:layout_marginBottom="29.3dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="15.3sp"
+        android:background="@drawable/custom_button_drawable"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

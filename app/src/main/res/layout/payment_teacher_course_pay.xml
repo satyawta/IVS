@@ -586,7 +586,7 @@
             android:layout_marginLeft="20.7dp"
             android:layout_below="@+id/view_pay_teacher_course"
             android:textColor="#252525"
-            tools:text="@string/courseprice" />
+            android:text="@string/courseprice" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -596,7 +596,7 @@
             android:layout_marginLeft="20.7dp"
             android:layout_below="@+id/course_price"
             android:textColor="#252525"
-            tools:text="INR 2,000" />
+            android:text="INR 2,000" />
 
         <Button
             android:id="@+id/buynow"

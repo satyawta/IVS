@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15.5sp"
+        android:id="@+id/language_selection"
+        android:textColor="#2b2b2b"
+        android:text="Select Language"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22.7dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/language_selection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:id="@+id/language_frame">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/english_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/language_selection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/english_hdpi" />
+
+    <TextView
+        android:id="@+id/language_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/english_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="English"
+        android:textColor="#9a9a9a"
+        android:textSize="15.5sp" />
+
+    <!--<ImageView
+        android:id="@+id/hindi_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/english_image"
+        android:layout_toLeftOf="@+id/language_frame"
+        android:layout_toStartOf="@+id/language_frame"
+        android:src="@drawable/hindi_hdpi" />
+
+    <TextView
+        android:id="@+id/language_type_hindi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/language_type"
+        android:layout_alignBottom="@+id/language_type"
+        android:layout_alignLeft="@+id/hindi_image"
+        android:layout_alignStart="@+id/hindi_image"
+        android:text="Hindi"
+        android:textColor="#9a9a9a"
+        android:textSize="15.5sp" />
+
+    <ImageView
+        android:id="@+id/telugu_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/hindi_image"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_toEndOf="@+id/language_type_hindi"
+        android:layout_toRightOf="@+id/language_type_hindi"
+        android:src="@drawable/telugu_alphabet" />
+
+    <TextView
+        android:id="@+id/language_type_telugu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/language_type_hindi"
+        android:layout_alignBottom="@+id/language_type_hindi"
+        android:layout_alignLeft="@+id/telugu_image"
+        android:layout_alignStart="@+id/telugu_image"
+        android:text="telugu"
+        android:textColor="#9a9a9a"
+        android:textSize="15.5sp" />-->
+
+    <Button
+        android:layout_width="328.7dp"
+        android:layout_height="59dp"
+        android:id="@+id/language_dialog"
+        android:layout_below="@+id/language_type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/custom_button_drawable"
+        android:text="Next"
+        android:textAllCaps="false" />
+</RelativeLayout>

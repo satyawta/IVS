@@ -58,7 +58,7 @@
         android:layout_height="@dimen/textbox_height"
         android:textSize="20sp"
         android:textColor="#ffffff"
-        android:id="@+id/view_course"
+        android:id="@+id/payment_unsucessful"
         android:textAllCaps="false"
         android:text="@string/try_again"
         android:fontFamily="@font/helveticaneueltstd_md"
