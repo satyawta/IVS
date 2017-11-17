@@ -13,11 +13,11 @@
         android:background="?attr/colorPrimary" />
 
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:src="@drawable/menu_alt_512" />
+        android:src="@drawable/menu_alt_512" />-->
 
 
 </RelativeLayout>
