@@ -101,6 +101,7 @@
             android:layout_width="@dimen/textbox_width"
             android:layout_height="@dimen/textbox_height"
             android:textSize="20sp"
+            android:id="@+id/sign_up"
             android:textColor="#ffffff"
             android:textAllCaps="false"
             android:text="@string/register"

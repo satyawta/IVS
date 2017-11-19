@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="142.3dp"
+    android:layout_height="192.7dp"
+    android:id="@+id/course_card"
+    android:layout_marginLeft="22dp"
+    android:layout_marginTop="16.7dp"
+    android:background="@drawable/frame">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_course_card">
+
+        <ImageView
+            android:id="@+id/course_card_img"
+            android:layout_width="142.3dp"
+            android:layout_height="98.3dp"
+            android:src="@drawable/chakras" />
+
+        <TextView
+            android:id="@+id/course_name_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/course_card_img"
+            android:layout_marginLeft="11.7dp"
+            android:layout_marginTop="10dp"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="1.4sp"
+            android:text="Chakras"
+            android:textColor="#363535"
+            android:textSize="15.5sp" />
+
+        <ImageView
+            android:id="@+id/play_course_card"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_below="@+id/course_name_card"
+            android:layout_marginLeft="11.7dp"
+            android:layout_marginTop="28.7dp"
+            android:src="@drawable/play_orange_list" />
+
+        <TextView
+            android:id="@+id/videos_count_course_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/course_name_card"
+            android:layout_marginLeft="5.3dp"
+            android:layout_marginTop="28.7dp"
+            android:layout_toRightOf="@+id/play_course_card"
+            android:fontFamily="@font/helveticaneueltstd_lt"
+            android:text="22 Videos"
+            android:textColor="#363535"
+            android:textSize="9.2sp" />
+
+        <TextView
+            android:id="@+id/language_course_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videos_count_course_card"
+            android:layout_marginBottom="12.7dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="29.3dp"
+            android:letterSpacing="0.02"
+            android:lineSpacingExtra="7.8sp"
+            android:text="Language: Hindi, English"
+            android:textColor="#363535"
+            android:textSize="9.2sp" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

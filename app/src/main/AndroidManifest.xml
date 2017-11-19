@@ -32,6 +32,7 @@
         <activity android:name=".OnboardingFragment3" />
         <activity android:name=".Login" />
         <activity android:name=".landingscreen"></activity>
+        <activity android:name=".teacher_profile"></activity>
         <activity android:name=".teacher_pay_course"></activity>
         <activity android:name=".payment_successful" />
         <activity android:name=".payment" />

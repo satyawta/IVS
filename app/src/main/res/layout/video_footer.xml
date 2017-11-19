@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8.8sp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="18dp"
+        android:id="@+id/price_course"
+        android:textColor="#252525"
+        android:text="Course Price"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18.8sp"
+        android:id="@+id/course_price_video"
+        android:layout_marginLeft="15.7dp"
+        android:layout_marginTop="5.7dp"
+        android:layout_below="@+id/price_course"
+        android:textColor="#252525"
+        android:text="INR 2,000"
+        />
+
+    <TextView
+        android:layout_width="155dp"
+        android:layout_height="42.7dp"
+        android:layout_alignBottom="@+id/course_price_video"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10.3dp"
+        android:layout_marginRight="10.3dp"
+        android:background="@drawable/custom_button_drawable"
+        android:gravity="center"
+        android:letterSpacing="0.03"
+        android:text="Buy Now"
+        android:textColor="#ffffff"
+        android:textSize="15.8sp" />
+</RelativeLayout>

@@ -31,7 +31,7 @@ public class languagefragment extends DialogFragment {
         btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), teacher_pay_course.class);
+                Intent intent = new Intent(getActivity(), teacher_profile.class);
                 startActivity(intent);
             }
         });
