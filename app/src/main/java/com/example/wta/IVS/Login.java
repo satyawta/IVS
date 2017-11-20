@@ -19,7 +19,7 @@ import com.facebook.appevents.AppEventsLogger;
 public class Login extends Activity {
 
     Button login;
-    TextView register;
+    TextView register, forget_password;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class Login extends Activity {
 
         login = findViewById(R.id.login);
         register=findViewById(R.id.register);
+        forget_password = findViewById(R.id.forgetpassword);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +47,13 @@ public class Login extends Activity {
             public void onClick(View view) {
                 Intent intent1=new Intent(getApplicationContext(),register.class);
                 startActivity(intent1);
+            }
+        });
+        forget_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), reset_password_email.class);
+                startActivity(intent);
             }
         });
     }
