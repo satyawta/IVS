@@ -17,10 +17,23 @@ public class ApiCall {
 
     public static OkHttpClient client = new OkHttpClient();
 
-    public static Call post(String url, String userName, String password , Callback callback)
+    public static Call get(String url, Callback callback)
+    {
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        Call call = client.newCall(request);
+        call.enqueue(callback);
+
+        return call;
+    }
+
+
+    public static Call post(String url, String email, String password  , Callback callback)
     {
         RequestBody formBody = new FormBody.Builder()
-                .add("username", userName)
+                .add("email", email)
                 .add("password", password)
                 .add("submit","")
                 .build();

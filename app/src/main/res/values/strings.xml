@@ -10,6 +10,9 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="login">Login</string>
     <string name="todo">TODO</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
     <string name="back_to_school_simplicity">Back to school
         simplicity</string>
     <string name="easily_navigate">Easily navigate through courses and packages to choose your interests with a user friendly interface</string>
