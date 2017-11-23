@@ -67,7 +67,7 @@
         android:layout_marginTop="25dp"
         android:src="@drawable/indicator_selected" />
 
-    <ListView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/course_list"
@@ -75,7 +75,9 @@
         android:layout_marginRight="15.7dp"
         android:layout_marginTop="29dp"
         android:layout_marginBottom="37dp"
-        android:layout_below="@+id/landingcourses"></ListView>
+        android:layout_below="@+id/landingcourses">
+
+    </android.support.v7.widget.RecyclerView>
     <!--<include
         android:id="@+id/cardview"
         layout="@layout/card"

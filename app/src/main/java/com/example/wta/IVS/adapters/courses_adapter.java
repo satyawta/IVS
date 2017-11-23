@@ -6,13 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.bumptech.glide.Glide;
 import com.example.wta.IVS.R;
 import com.example.wta.IVS.app.AppController;
 import com.example.wta.IVS.models.video_model;
+import com.example.wta.IVS.util.Constants;
 
 import java.util.List;
 
@@ -57,15 +60,19 @@ public class courses_adapter extends BaseAdapter {
             convertView=inflater.inflate(R.layout.card,null);
         if(imageLoader==null)
             imageLoader=AppController.getInstance().getImageLoader();
-        NetworkImageView img=convertView.findViewById(R.id.courseimage);
+      //  NetworkImageView img=convertView.findViewById(R.id.courseimage);
+        ImageView img = convertView.findViewById(R.id.courseimage);
         TextView course_name=convertView.findViewById(R.id.course_name_grid);
         TextView course_cost=convertView.findViewById(R.id.course_price_landing);
         TextView course_language=convertView.findViewById(R.id.language_type_english);
         TextView course_time=convertView.findViewById(R.id.course_duration_text);
 
         video_model vd=video_models.get(position);
+        String imagecode=vd.getClass_cover();
+        String imageurl = Constants.ImageUrl+imagecode;
 
-        img.setImageUrl(vd.getClass_cover(),imageLoader);
+        Glide.with(activity).load(imageurl).centerCrop().into(img);
+     //   img.setImageUrl(vd.getClass_cover(),imageLoader);
         course_name.setText(vd.getClass_name());
         course_cost.setText(vd.getClass_cost());
         course_language.setText(vd.getClass_language());
