@@ -47,7 +47,7 @@
             android:textSize="9.9sp" />
 
         <TextView
-            android:id="@+id/classname"
+            android:id="@+id/classname_course"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/classnumber_video_course"
@@ -63,7 +63,7 @@
             android:id="@+id/videoplay_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/classname"
+            android:layout_below="@+id/classname_course"
             android:layout_marginTop="16.7dp"
             android:layout_toEndOf="@+id/video_play_course"
             android:layout_toRightOf="@+id/video_play_course"
@@ -73,8 +73,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/class_duration_course"
             android:layout_toRightOf="@id/videoplay_icon"
-            android:layout_below="@+id/classname"
+            android:layout_below="@+id/classname_course"
             android:layout_marginTop="15.7dp"
             android:layout_marginLeft="5.3dp"
             android:layout_centerHorizontal="true"

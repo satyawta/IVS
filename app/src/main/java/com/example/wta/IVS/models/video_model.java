@@ -9,7 +9,7 @@ public class video_model {
 
     private String class_id;
     private String class_page_link;
-    private String class_page_metadata;
+    private String class_page_matadata;
     private String class_page_description;
     private String class_teacher;
     private String class_language;
@@ -21,6 +21,27 @@ public class video_model {
     private String select_video_type;
     private String video_code;
     private String class_status;
+
+    public video_model(String class_id, String class_page_link, String class_page_matadata,
+                       String class_page_description, String class_teacher, String class_language, String class_name,
+                       String class_description, String class_cover, String class_cost, String class_duration,
+                       String select_video_type, String video_code, String class_status) {
+        this.class_id = class_id;
+        this.class_page_link = class_page_link;
+        this.class_page_matadata = class_page_matadata;
+        this.class_page_description = class_page_description;
+        this.class_teacher = class_teacher;
+        this.class_language = class_language;
+        this.class_name = class_name;
+
+        this.class_description = class_description;
+        this.class_cover = class_cover;
+        this.class_cost = class_cost;
+        this.class_duration = class_duration;
+        this.select_video_type = select_video_type;
+        this.video_code = video_code;
+        this.class_status = class_status;
+    }
 
     public String getClass_id() {
         return class_id;
@@ -38,14 +59,6 @@ public class video_model {
         this.class_page_link = class_page_link;
     }
 
-    public String getClass_page_metadata() {
-        return class_page_metadata;
-    }
-
-    public void setClass_page_metadata(String class_page_metadata) {
-        this.class_page_metadata = class_page_metadata;
-    }
-
     public String getClass_page_description() {
         return class_page_description;
     }
@@ -53,7 +66,13 @@ public class video_model {
     public void setClass_page_description(String class_page_description) {
         this.class_page_description = class_page_description;
     }
+    public String getClass_page_matadata() {
+        return class_page_matadata;
+    }
 
+    public void setClass_page_matadata(String class_page_matadata) {
+        this.class_page_matadata = class_page_matadata;
+    }
     public String getClass_teacher() {
         return class_teacher;
     }

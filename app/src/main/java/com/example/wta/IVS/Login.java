@@ -59,8 +59,9 @@ public class Login extends Activity{
                                               public void onResponse(Call call, Response response) throws IOException {
                                                   if (response.isSuccessful()) {
                                                       String responsedata = response.body().string();
+                                                      System.out.println("response--"+responsedata);
                                                       if (responsedata.equalsIgnoreCase("true")) {
-                                                          Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                                          Intent intent = new Intent(getApplicationContext(), landingscreen.class);
                                                           startActivity(intent);
                                                       } else {
                                                           runOnUiThread(new Runnable() {

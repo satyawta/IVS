@@ -67,14 +67,23 @@
         android:layout_marginTop="25dp"
         android:src="@drawable/indicator_selected" />
 
-    <include
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/course_list"
+        android:layout_marginLeft="15.7dp"
+        android:layout_marginRight="15.7dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="37dp"
+        android:layout_below="@+id/landingcourses"></ListView>
+    <!--<include
         android:id="@+id/cardview"
         layout="@layout/card"
         android:layout_width="380.7dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/landingcourses"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp" />
+        android:layout_marginTop="28dp" />-->
 
     <!-- <ImageView
          android:layout_width="wrap_content"

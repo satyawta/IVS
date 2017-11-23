@@ -1,12 +1,18 @@
 package com.example.wta.IVS;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +23,7 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.w3c.dom.Attr;
@@ -30,7 +37,9 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -46,22 +55,26 @@ import okhttp3.Response;
 /*30:D7:F2:39:17:E4:A3:85:7C:33:14:7C:C5:7E:BA:1D:48:5B:76:B0
 
         AIzaSyAWPApjHydbWnVkTVNXuIJ0lOPwKFg2QZQ*/
-public class payment_teacher_videos extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
+public class payment_teacher_videos extends AppCompatActivity  {
 
     TextView about,classnumber;
     String videoUrl;
     private static final int RECOVERY_REQUEST = 1;
-    private YouTubePlayerView youTubeView;
-    String videocode;
+    private ImageView youTubeView;
+    String videocode,class_id,class_page_link,class_page_matadata,class_page_description,class_teacher,class_language,class_name,class_description,class_cover,class_cost,class_duration,select_video_type,video_code,class_status;;
     ImageView img;
+
+
+    private ProgressDialog pDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_teacher_video);
 
+
         youTubeView = findViewById(R.id.image_course_video);
-        youTubeView.initialize(config.YOUTUBE_API_KEY, this);
+        //youTubeView.initialize(config.YOUTUBE_API_KEY, this);
 
          about = findViewById(R.id.about_course_video);
          classnumber=findViewById(R.id.classnumber_video_course);
@@ -76,7 +89,7 @@ public class payment_teacher_videos extends YouTubeBaseActivity implements YouTu
             }
         });
 
-        getData();
+        //getData();
     }
 
     private void getData() {
@@ -95,7 +108,6 @@ public class payment_teacher_videos extends YouTubeBaseActivity implements YouTu
                     try {
                         JSONObject jsonbject = new JSONObject(responseData);
 
-
                         videocode = jsonbject.getString("video_code");
 
                         System.out.println("code is  " + videocode);
@@ -111,7 +123,7 @@ public class payment_teacher_videos extends YouTubeBaseActivity implements YouTu
             }
         });
     }
-
+/*
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
 
@@ -142,4 +154,6 @@ public class payment_teacher_videos extends YouTubeBaseActivity implements YouTu
     protected YouTubePlayer.Provider getYouTubePlayerProvider() {
         return youTubeView;
     }
+*/
+
 }

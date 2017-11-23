@@ -61,9 +61,9 @@
     <string name="courseprice">Course Price</string>
     <string name="welcome_user">Welcome \n  MANISH SURAPANENI \n Start Taking Courses!</string>
     <string name="our_courses">Our Courses</string>
-    <string name="course_time">Course Duration: 3 Months</string>
+    <string name="course_time">3 Months</string>
     <string name="starting_from">Starting from</string>
-    <string name="cost">INR 2,000</string>
+    <string name="cost">2,000</string>
     <string name="class_duration">03:45</string>
     <string name="try_again">Try Again</string>
     <string name="total_amount_2_350">Total Amount: 2,350</string>
