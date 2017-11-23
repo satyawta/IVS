@@ -31,9 +31,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity android:name=".OnboardingFragment1" />
-        <activity android:name=".OnboardingFragment2" />
-        <activity android:name=".OnboardingFragment3" />-->
+        <activity android:name=".SlidesActivity"/>
         <activity android:name=".Login" />
         <activity android:name=".landingscreen"></activity>
         <activity android:name=".teacher_profile"></activity>

@@ -45,5 +45,4 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
     compile 'com.google.apis:google-api-services-youtube:v3-rev181-1.22.0'
     implementation files('src/YouTubeAndroidPlayerApi.jar')
-    implementation files('src/volley.jar')
 }

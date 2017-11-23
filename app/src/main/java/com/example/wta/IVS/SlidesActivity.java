@@ -20,9 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by Rakhra on 8/3/2016.
- */
 public class SlidesActivity extends AppCompatActivity implements View.OnClickListener {
 
     private PagerAdapter mPagerAdapter;
@@ -41,6 +38,7 @@ public class SlidesActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
+        viewPager=findViewById(R.id.view_pager);
         bt_next = findViewById(R.id.bt_next);
 
         bt_next.setOnClickListener(this);
