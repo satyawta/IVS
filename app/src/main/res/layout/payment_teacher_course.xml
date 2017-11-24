@@ -14,12 +14,9 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/payment_teacher_frame">
 
-            <com.google.android.youtube.player.YouTubePlayerView
-                android:id="@+id/youtube_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
 
-        <!--    <RelativeLayout
+
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|center_vertical"
@@ -33,7 +30,7 @@
             android:id="@+id/payment_teacher_image"
                     android:src="@drawable/group_32" />
 
-                &lt;!&ndash; <ImageView
+                <!-- <ImageView
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:id="@+id/play_preview_course"
@@ -57,9 +54,10 @@
                      android:textColor="#ffffff"
                      tools:text="Watch Course Preview"
                      android:layout_marginStart="130dp"
-                     android:layout_marginEnd="111.7dp" />&ndash;&gt;
-            </RelativeLayout>-->
+                     android:layout_marginEnd="111.7dp" />-->
+            </RelativeLayout>
         </FrameLayout>
+
         <TextView
             android:id="@+id/coursename"
             android:layout_width="wrap_content"

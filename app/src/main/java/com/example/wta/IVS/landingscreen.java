@@ -73,7 +73,7 @@ public class landingscreen extends MainActivity  {
             @Override
             public void onItemClick(int position, View v) {
                 System.out.println("clicked === "+position);
-                Intent i=new Intent(landingscreen.this,payment_teacher_course.class);
+                Intent i=new Intent(landingscreen.this,teacher_profile.class);
                 i.putExtra("videocode",modelList.get(position).getVideo_code());
                 startActivity(i);
             }
@@ -90,12 +90,11 @@ public class landingscreen extends MainActivity  {
         mpaint.setShader(new BitmapShader(mbitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP));
         canvas.drawRoundRect((new RectF(0, 0, mbitmap.getWidth(), mbitmap.getHeight())), 100, 100, mpaint);// Round Image Corner 100 100 100 100
         img.setImageBitmap(imageRounded);
+
         final FragmentManager fm = getFragmentManager();
         final languagefragment l = new languagefragment();
     }
     private class GetVideos extends AsyncTask<Void,Void,Void> {
-
-
         @Override
         protected Void doInBackground(Void... voids) {
             HttpHandler sh = new HttpHandler();
@@ -139,7 +138,6 @@ public class landingscreen extends MainActivity  {
                     e.printStackTrace();
                 }
             }
-
 
             return null;
         }
