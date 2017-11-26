@@ -19,22 +19,21 @@
             android:textColor="#2b2b2b"
             android:textSize="25.4sp" />
 
-        <TextView
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/coursename"
-            android:layout_alignBottom="@+id/coursename"
-            android:layout_alignEnd="@+id/terms_conditions"
-            android:layout_alignRight="@+id/terms_conditions"
-            android:background="@drawable/custom_rectangle_drawable"
-            android:paddingBottom="10dp"
-            android:paddingLeft="10.3dp"
-            android:paddingRight="9.7dp"
-            android:paddingTop="9.7dp"
-            android:text="3.8"
-            android:textColor="#ffffff"
-            android:textSize="22sp" />
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/coursename"
+                android:layout_alignEnd="@+id/terms_conditions"
+                android:layout_alignRight="@+id/terms_conditions"
+                android:background="@drawable/custom_rectangle_drawable"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10.3dp"
+                android:paddingRight="9.7dp"
+                android:paddingTop="9.7dp"
+                android:text="3.8"
+                android:textColor="#ffffff"
+                android:textSize="22sp" />
 
         <TextView
             android:id="@+id/ordersummary"
@@ -254,16 +253,23 @@
             android:text="@string/terms_conditions"
             android:textColor="#363535"
             android:textSize="12sp" />
-
+        <View
+            android:id="@+id/static_footer_pay_noe"
+            android:layout_width="370.7dp"
+            android:layout_height="0.7dp"
+            android:background="#d1d4da"
+            android:layout_below="@+id/terms_conditions"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16.7dp" />
         <TextView
             android:id="@+id/cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="left|bottom"
-            android:layout_below="@+id/terms_conditions"
+            android:layout_below="@+id/static_footer_pay_noe"
             android:layout_marginBottom="26.7dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="48.3dp"
+            android:layout_marginTop="27.3dp"
             android:text="Cancel"
             android:textColor="#252525"
             android:textSize="18.8sp" />
@@ -272,16 +278,18 @@
             android:id="@+id/payment_buy"
             android:layout_width="155dp"
             android:layout_height="42.7dp"
-            android:layout_alignTop="@+id/cancel"
-            android:layout_toEndOf="@+id/teacher_name"
-            android:layout_toRightOf="@+id/teacher_name"
+            android:layout_below="@+id/static_footer_pay_noe"
+            android:layout_alignEnd="@+id/totalamount"
+            android:layout_alignRight="@+id/totalamount"
+            android:layout_gravity="right|bottom"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="16.7dp"
+            android:layout_marginRight="6dp"
             android:background="@drawable/custom_button_drawable"
             android:gravity="center"
             android:letterSpacing="0.03"
-            android:padding="12dp"
             android:text="Buy Now"
             android:textColor="#ffffff"
             android:textSize="15.8sp" />
-
     </RelativeLayout>
 </ScrollView>

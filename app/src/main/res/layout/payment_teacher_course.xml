@@ -22,12 +22,11 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 tools:ignore="UselessParent">
 
-                <ImageView
+                <com.google.android.youtube.player.YouTubePlayerView
                     android:layout_width="match_parent"
-            android:layout_height="90dp"
-                    android:scaleType="fitXY"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/payment_teacher_image"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/payment_teacher_image"
                     android:src="@drawable/group_32" />
 
                 <!-- <ImageView
@@ -260,8 +259,30 @@
             android:layout_below="@+id/course_rating_text"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="22.7dp" />
-
-        <TextView
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:id="@+id/tab_layout_teacher_course"
+            android:layout_below="@+id/teacher_profile_view_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:background="@drawable/my_button_bg"
+                android:layout_weight="0.5"
+                android:id="@+id/about_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"
+                />
+            <Button
+                android:background="#ffffff"
+                android:text="Videos"
+                android:id="@+id/video_course"
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+       <!-- <TextView
             android:id="@+id/about_course"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -294,12 +315,12 @@
             android:layout_alignEnd="@+id/about"
             android:layout_marginStart="228.3dp"
             android:paddingEnd="77.7dp" />
-
+-->
         <View
             android:id="@+id/teacher_profile_view_bottom"
             android:layout_width="match_parent"
             android:layout_height="0.7dp"
-            android:layout_below="@+id/about_Courses"
+            android:layout_below="@+id/tab_layout_teacher_course"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="22.7dp" />
 
@@ -365,9 +386,9 @@
             android:id="@+id/review_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/teachername_rating"
+            android:layout_alignStart="@+id/teachername_rating"
             android:layout_below="@+id/reviews_count"
-            android:layout_toEndOf="@+id/about_course"
-            android:layout_toRightOf="@+id/about_course"
             android:text="@string/review_value"
             android:textColor="#252525"
             android:textSize="25.1sp" />

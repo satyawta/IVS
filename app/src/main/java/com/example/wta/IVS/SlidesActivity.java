@@ -1,3 +1,4 @@
+/*
 package com.example.wta.IVS;
 
 import android.content.Intent;
@@ -72,9 +73,11 @@ public class SlidesActivity extends AppCompatActivity implements View.OnClickLis
     }
 
 
-    /**
+    */
+/**
      * Adding all the fragments
-     */
+     *//*
+
     private List<Fragment> getFragments() {
         List<Fragment> fList = new ArrayList<Fragment>();
         fList.add(new OnboardingFragment1());
@@ -97,10 +100,12 @@ public class SlidesActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    /**
+    */
+/**
      * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
      * sequence.
-     */
+     *//*
+
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         private List<Fragment> fragments;
 
@@ -126,3 +131,4 @@ public class SlidesActivity extends AppCompatActivity implements View.OnClickLis
 
 }
 
+*/

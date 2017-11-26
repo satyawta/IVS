@@ -21,25 +21,25 @@ import com.google.android.youtube.player.YouTubePlayerView;
  * 16/11/2017.
  */
 
-public class payment_teacher_course extends Activity{
+public class payment_teacher_course extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener{
 
     TextView videos;
-    String videocode;
+    String video;
 
-    /*private static final int RECOVERY_REQUEST = 1;
-    private YouTubePlayerView youTubeView;*/
+    private static final int RECOVERY_REQUEST = 1;
+    private YouTubePlayerView youTubeView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_teacher_course);
 
-       /* Intent intent = getIntent();
-         videocode=intent.getStringExtra("videocode");
-        System.out.println("video code ==="+videocode);
+        Intent intent = getIntent();
+        String video =intent.getStringExtra("videocode");
+        System.out.println("video code ==="+video);
 
-        youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
-        youTubeView.initialize(config.YOUTUBE_API_KEY, this);*/
+        youTubeView = (YouTubePlayerView) findViewById(R.id.payment_teacher_image);
+        youTubeView.initialize(config.YOUTUBE_API_KEY, this);
 
         videos=findViewById(R.id.about_Courses);
 
@@ -53,11 +53,11 @@ public class payment_teacher_course extends Activity{
         });
 
     }
-/*@Override
+@Override
 public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
 
         if (!b) {
-        youTubePlayer.cueVideo(videocode); // Plays https://www.youtube.com/watch?v=fhWaJi1Hsfo
+        youTubePlayer.cueVideo(video); // Plays https://www.youtube.com/watch?v=fhWaJi1Hsfo
         }
         }
 
@@ -82,5 +82,5 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 protected YouTubePlayer.Provider getYouTubePlayerProvider() {
         return youTubeView;
-        }*/
+        }
 }

@@ -1,5 +1,6 @@
 package com.example.wta.IVS;
 
+import android.app.Dialog;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -24,6 +26,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -40,10 +43,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class landingscreen extends MainActivity  {
+public class landingscreen extends AppCompatActivity  {
+
     ImageView img;
     private List<video_model> videos=new ArrayList<video_model>();
-    String class_id,class_page_link,class_page_matadata,class_page_description,class_teacher,class_language,class_name,class_description,class_cover,class_cost,class_duration,select_video_type,video_code,class_status;;
+    public String class_id,class_page_link,class_page_matadata,class_page_description,class_teacher,class_language,class_name,class_description,class_cover,class_cost,class_duration,select_video_type,video_code,class_status;;
     private static String url = "http://indianvedicschool.com/apis/get_courses.php";
     private String TAG = payment_teacher_videos.class.getSimpleName();
 
@@ -61,6 +65,7 @@ public class landingscreen extends MainActivity  {
         setContentView(R.layout.landingscreen);
         img = findViewById(R.id.landingscreen_image);
 
+
         video=new ArrayList<>();
 
         mAdapter = new RecyclerviewCourses(modelList,this);
@@ -73,6 +78,9 @@ public class landingscreen extends MainActivity  {
             @Override
             public void onItemClick(int position, View v) {
                 System.out.println("clicked === "+position);
+                final FragmentManager fm = getFragmentManager();
+                final languagefragment l = new languagefragment();
+                l.show(fm, "Dialog");
                 Intent i=new Intent(landingscreen.this,teacher_profile.class);
                 i.putExtra("videocode",modelList.get(position).getVideo_code());
                 startActivity(i);
@@ -91,8 +99,7 @@ public class landingscreen extends MainActivity  {
         canvas.drawRoundRect((new RectF(0, 0, mbitmap.getWidth(), mbitmap.getHeight())), 100, 100, mpaint);// Round Image Corner 100 100 100 100
         img.setImageBitmap(imageRounded);
 
-        final FragmentManager fm = getFragmentManager();
-        final languagefragment l = new languagefragment();
+
     }
     private class GetVideos extends AsyncTask<Void,Void,Void> {
         @Override
@@ -150,4 +157,5 @@ public class landingscreen extends MainActivity  {
 
         }
     }
+
 }

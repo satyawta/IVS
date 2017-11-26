@@ -17,6 +17,7 @@ import android.widget.Button;
 public class languagefragment extends DialogFragment {
 
     Button btnnext;
+    String videocode;
 
     @Nullable
     @Override
@@ -32,6 +33,9 @@ public class languagefragment extends DialogFragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), teacher_profile.class);
+                videocode=intent.getStringExtra("videocode");
+                System.out.println("video code ==="+videocode);
+
                 startActivity(intent);
             }
         });

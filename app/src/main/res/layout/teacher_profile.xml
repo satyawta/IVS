@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scroll_profile"
-    android:layout_width="wrap_content"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--<android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />-->
+
+<ScrollView
+    android:id="@+id/scroll_profile"
+    android:layout_below="@+id/toolbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -268,43 +280,34 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="22.7dp" />
 
-        <TextView
-            android:id="@+id/about_course"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:id="@+id/layout_tab_teacher_profile"
             android:layout_below="@+id/teacher_profile_view_top"
-            android:layout_marginLeft="65.7dp"
-            android:layout_marginStart="65.7dp"
-            android:letterSpacing="0.02"
-            android:lineSpacingExtra="0.7sp"
-            android:text="@string/about"
-            android:textColor="#363535"
-            android:textSize="15.3sp"/>
-
-        <TextView
-            android:id="@+id/about_Courses"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/about"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignRight="@+id/about"
-            android:layout_below="@+id/teacher_profile_view_top"
-            android:layout_marginLeft="228.3dp"
-            android:layout_marginStart="228.3dp"
-            android:letterSpacing="0.02"
-            android:lineSpacingExtra="0.7sp"
-            android:paddingEnd="77.7dp"
-            android:paddingRight="77.7dp"
-            android:text="@string/videos_title"
-            android:textColor="#363535"
-            android:textSize="15.3sp"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:background="@drawable/my_button_bg"
+                android:layout_weight="0.5"
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"/>
+            <Button
+                android:background="#ffffff"
+                android:text="Videos"
+                android:id="@+id/videos"
+                android:layout_weight="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
         <View
             android:id="@+id/teacher_profile_view_bottom"
             android:layout_width="match_parent"
             android:layout_height="0.7dp"
-            android:layout_below="@+id/about_Courses"
+            android:layout_below="@+id/layout_tab_teacher_profile"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="22.7dp" />
 
@@ -339,3 +342,4 @@
         android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 </ScrollView>
+</RelativeLayout>

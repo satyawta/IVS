@@ -7,6 +7,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,7 +17,14 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
+import android.net.Uri;
+import android.widget.MediaController;
 
+import com.example.wta.IVS.adapters.RecyclerviewCourses;
+//import com.example.wta.IVS.adapters.RecyclerviewVideos;
+import com.example.wta.IVS.models.Model;
+import com.example.wta.IVS.models.video_model;
 import com.example.wta.IVS.networkCall.NetworkClass;
 import com.example.wta.IVS.videos.config;
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -40,6 +49,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -56,13 +66,21 @@ import okhttp3.Response;
 
         AIzaSyAWPApjHydbWnVkTVNXuIJ0lOPwKFg2QZQ*/
 public class payment_teacher_videos extends AppCompatActivity  {
-
+    String vidAddress = "https://player.vimeo.com/external/230901816.hd.mp4?s=57e7b343a87f006b4f8bd781ea56f54dc09ee9b9&profile_id=174";
+    String vidAddress2 = "https://player.vimeo.com/external/230900892.hd.mp4?s=94918feec344ce9a0504482b874663d312a3a371&profile_id=174";
+    private List<video_model> videos=new ArrayList<video_model>();
+    private List<Model> modelList = new ArrayList<>();
+    private RecyclerView recyclerView;
+    private RecyclerviewCourses mAdapter;
+    ArrayList<HashMap<String, String>> video;
     TextView about,classnumber;
     String videoUrl;
     private static final int RECOVERY_REQUEST = 1;
     private ImageView youTubeView;
+    private VideoView vimeoView;
     String videocode,class_id,class_page_link,class_page_matadata,class_page_description,class_teacher,class_language,class_name,class_description,class_cover,class_cost,class_duration,select_video_type,video_code,class_status;;
     ImageView img;
+    Uri vidUri = Uri.parse(vidAddress);
 
 
     private ProgressDialog pDialog;
@@ -71,23 +89,46 @@ public class payment_teacher_videos extends AppCompatActivity  {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_teacher_video);
+        video=new ArrayList<>();
 
-
-        youTubeView = findViewById(R.id.image_course_video);
-        //youTubeView.initialize(config.YOUTUBE_API_KEY, this);
-
-         about = findViewById(R.id.about_course_video);
-         classnumber=findViewById(R.id.classnumber_video_course);
-
-         img=findViewById(R.id.videoimage);
-
-        about.setOnClickListener(new View.OnClickListener() {
+        mAdapter = new RecyclerviewCourses(modelList,this);
+      /* recyclerView =(RecyclerView)findViewById(R.id.videos_list);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setAdapter(mAdapter);
+        mAdapter.setClickListener(new RecyclerviewCourses.ClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), payment_teacher_course.class);
-                startActivity(intent);
+            public void onItemClick(int position, View v) {
+                System.out.println("clicked === "+position);
+                Intent i=new Intent(payment_teacher_videos.this,teacher_profile.class);
+                //i.putExtra("videocode",modelList.get(position).getVideo_code());
+                Uri vidUri = Uri.parse(vidAddress2);
+                startActivity(i);
             }
-        });
+        });*/
+
+
+
+        //youTubeView = findViewById(R.id.image_course_video);
+        //youTubeView.initialize(config.YOUTUBE_API_KEY, this);
+        vimeoView = findViewById(R.id.imagevideo);
+        MediaController vidControl = new MediaController(this);
+        vidControl.setAnchorView(vimeoView);
+        vimeoView.setMediaController(vidControl);
+        vimeoView.setVideoURI(vidUri);
+        vimeoView.start();
+        // about = findViewById(R.id.about_course_video);
+        classnumber=findViewById(R.id.classnumber_video_course);
+
+        img=findViewById(R.id.videoimage);
+
+//        about.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), payment_teacher_course.class);
+//                startActivity(intent);
+//            }
+//        });
 
         //getData();
     }

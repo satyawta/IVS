@@ -16,17 +16,25 @@ import android.widget.ImageView;
  * 16/11/2017.
  */
 
-public class OnboardingFragment2 extends Fragment {
+public class OnboardingFragment2 extends Activity {
 
-    ImageView onboarding_v;
+Button btn;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.onborading_v);
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.onborading_v, container, false);
+        btn = findViewById(R.id.onboarding_button_v);
 
-        onboarding_v = view.findViewById(R.id.onboarding_v);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        onboarding_v.setImageResource(R.drawable.onboarding_v);
-        return view;
+                Intent intent = new Intent(getApplicationContext(),OnboardingFragment3.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
