@@ -28,7 +28,7 @@ public class OnboardingFragment3 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.onborading_s);
 
-        btn = findViewById(R.id.onboarding_button_started);
+       /* btn = findViewById(R.id.onboarding_button_started);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +37,7 @@ public class OnboardingFragment3 extends Activity {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 }

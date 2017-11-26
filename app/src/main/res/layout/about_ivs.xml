@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:textSize="15.3sp"
             android:id="@+id/about"
+            android:fontFamily="@font/helveticaneueltstd_lt"
             android:layout_below="@+id/title_about"
             android:textColor="#363535"
             android:letterSpacing="0.02"

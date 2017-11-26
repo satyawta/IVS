@@ -147,6 +147,20 @@
             android:text="H"
             android:textColor="#252525"
             android:textSize="8sp" />-->
+        <TextView
+            android:id="@+id/course_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/course_price_landing"
+            android:layout_alignBottom="@+id/course_price_landing"
+            android:layout_alignEnd="@+id/starting_from"
+            android:layout_alignRight="@+id/starting_from"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:fontFamily="@font/helveticaneueltstd_md"
+            android:text="INR "
+            android:textColor="#252525"
+            android:textSize="12.1sp" />
 
         <TextView
             android:id="@+id/course_price_landing"
@@ -156,10 +170,9 @@
             android:layout_alignRight="@+id/rating_landing"
             android:layout_alignTop="@+id/course_duration"
             android:fontFamily="@font/helveticaneueltstd_md"
-            android:text="INR 2000"
+            android:text="2000 "
             android:textColor="#252525"
-            android:textSize="12.1sp"
-            android:layout_toLeftOf="@+id/starting_from" />
+            android:textSize="12.1sp" />
 
 
     </RelativeLayout>

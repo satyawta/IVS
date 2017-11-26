@@ -27,13 +27,16 @@ public class languagefragment extends DialogFragment {
 
         getDialog().setTitle("Dialog");
 
+        Bundle bundle = getArguments();
+        videocode = bundle.getString("videocode");
+
         btnnext = view.findViewById(R.id.language_dialog);
 
         btnnext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), teacher_profile.class);
-                videocode=intent.getStringExtra("videocode");
+                intent.putExtra("videocode",videocode);
                 System.out.println("video code ==="+videocode);
 
                 startActivity(intent);

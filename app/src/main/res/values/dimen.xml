@@ -11,6 +11,8 @@
     <dimen name="textbox_height">53.3dp</dimen>
     <dimen name="textbox_width">306.7dp</dimen>
     <dimen name="onboarding_text">15.3sp</dimen>
+    <dimen name="paddint_top_teacher_profile">8.7dp</dimen>
+    <dimen name="reviews_count_left_margin">27.3dp</dimen>
     <dimen name="share_padding">14.7dp</dimen>
     <dimen name="nav_profile_img_top">63dp</dimen>
     <dimen name="nav_profile_img_left">77dp</dimen>

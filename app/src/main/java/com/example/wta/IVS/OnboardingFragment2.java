@@ -25,7 +25,7 @@ Button btn;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.onborading_v);
 
-        btn = findViewById(R.id.onboarding_button_v);
+      /*  btn = findViewById(R.id.onboarding_button_v);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +34,7 @@ Button btn;
                 Intent intent = new Intent(getApplicationContext(),OnboardingFragment3.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 }

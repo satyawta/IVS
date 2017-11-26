@@ -8,10 +8,10 @@
         android:id="@+id/onboarding_v"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/onboarding_v_nv"
+        android:src="@drawable/onboarding_v_no"
         android:scaleType="fitXY" />
 
-    <Button
+    <!--<Button
         android:layout_width="165.3dp"
         android:layout_height="46.7dp"
         android:layout_gravity="bottom|start"
@@ -25,6 +25,6 @@
         android:layout_alignParentBottom="true"
         android:textSize="15.3sp"
         android:background="@drawable/custom_button_drawable"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff" />-->
 
 </RelativeLayout>

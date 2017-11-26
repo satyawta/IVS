@@ -10,9 +10,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/onboarding_i"
         android:scaleType="fitXY"
-        android:src="@drawable/onboarding_i_nv" />
+        android:src="@drawable/onboarding_i_no" />
 
-    <Button
+    <!--<Button
         android:layout_width="165.3dp"
         android:layout_height="46.7dp"
         android:layout_gravity="bottom|start"
@@ -26,6 +26,6 @@
         android:layout_alignParentBottom="true"
         android:textSize="15.3sp"
         android:background="@drawable/custom_button_drawable"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff" />-->
 
 </RelativeLayout>

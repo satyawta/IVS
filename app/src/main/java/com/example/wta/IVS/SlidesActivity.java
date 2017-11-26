@@ -13,10 +13,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-
-
 import com.viewpagerindicator.CirclePageIndicator;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,16 +70,13 @@ public class SlidesActivity extends AppCompatActivity implements View.OnClickLis
     }
 
 
-    */
-/**
-     * Adding all the fragments
-     *//*
+
 
     private List<Fragment> getFragments() {
         List<Fragment> fList = new ArrayList<Fragment>();
-        fList.add(new OnboardingFragment1());
-        fList.add(new OnboardingFragment2());
-        fList.add(new OnboardingFragment3());
+        fList.add(new fragment1());
+        fList.add(new fragment2());
+        fList.add(new fragment3());
         return fList;
     }
 
@@ -100,11 +94,8 @@ public class SlidesActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    */
-/**
-     * A simple pager adapter that represents 5 ScreenSlidePageFragment objects, in
-     * sequence.
-     *//*
+
+
 
     private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
         private List<Fragment> fragments;

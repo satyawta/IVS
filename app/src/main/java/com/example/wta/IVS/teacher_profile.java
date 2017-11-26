@@ -3,8 +3,11 @@ package com.example.wta.IVS;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.DrawerLayout;
 import android.text.Layout;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +30,12 @@ public class teacher_profile extends YouTubeBaseActivity implements YouTubePlaye
 
     private static final int RECOVERY_REQUEST = 1;
     private YouTubePlayerView youTubeView;
+
+
+    //private NavigationView navigationView;
+    protected DrawerLayout drawer;
+    private android.support.v7.widget.Toolbar toolbar;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +55,13 @@ public class teacher_profile extends YouTubeBaseActivity implements YouTubePlaye
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),teacher_pay_course.class);
+                intent.putExtra("videocode",videocode);
                 startActivity(intent);
             }
         });
+
+
+
     }
 
     @Override
@@ -68,5 +81,11 @@ public class teacher_profile extends YouTubeBaseActivity implements YouTubePlaye
             Toast.makeText(this, error, Toast.LENGTH_LONG).show();
         }
     }
-    }
+
+/*    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        return false;
+    }*/
+}
 

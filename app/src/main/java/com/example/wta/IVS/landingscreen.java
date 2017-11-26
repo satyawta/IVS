@@ -13,6 +13,10 @@ import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,11 +24,14 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -43,9 +50,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class landingscreen extends AppCompatActivity  {
+import static com.facebook.FacebookSdk.getApplicationContext;
+
+public class landingscreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     ImageView img;
+    TextView classname;
     private List<video_model> videos=new ArrayList<video_model>();
     public String class_id,class_page_link,class_page_matadata,class_page_description,class_teacher,class_language,class_name,class_description,class_cover,class_cost,class_duration,select_video_type,video_code,class_status;;
     private static String url = "http://indianvedicschool.com/apis/get_courses.php";
@@ -59,11 +69,21 @@ public class landingscreen extends AppCompatActivity  {
     private List<Model> modelList = new ArrayList<>();
     private RecyclerView recyclerView;
     private RecyclerviewCourses mAdapter;
+
+    private NavigationView navigationView;
+    protected DrawerLayout drawer;
+    private android.support.v7.widget.Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.landingscreen);
+        setContentView(R.layout.view_profile_nav);
+        navigationView = findViewById(R.id.nav_view);
         img = findViewById(R.id.landingscreen_image);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        drawer = findViewById(R.id.navigationView);
 
 
         video=new ArrayList<>();
@@ -80,10 +100,14 @@ public class landingscreen extends AppCompatActivity  {
                 System.out.println("clicked === "+position);
                 final FragmentManager fm = getFragmentManager();
                 final languagefragment l = new languagefragment();
+                Bundle b=new Bundle();
+                b.putString("videocode",modelList.get(position).getVideo_code());
+                l.setArguments(b);
                 l.show(fm, "Dialog");
-                Intent i=new Intent(landingscreen.this,teacher_profile.class);
+                // l.setArguments(modelList.get(position).getVideo_code());
+                /*Intent i=new Intent(landingscreen.this,teacher_profile.class);
                 i.putExtra("videocode",modelList.get(position).getVideo_code());
-                startActivity(i);
+                startActivity(i);*/
             }
         });
 
@@ -100,7 +124,74 @@ public class landingscreen extends AppCompatActivity  {
         img.setImageBitmap(imageRounded);
 
 
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+
+        toggle.syncState();
+
+
+
+        navigationView.setNavigationItemSelectedListener(this);
+
+
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.payment) {
+            Toast.makeText(getApplicationContext(), "Payment is clicked", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.about) {
+            Intent intent=new Intent(getApplicationContext(),about_ivs.class);
+            startActivity(intent);
+        } else if (id == R.id.contact) {
+            Toast.makeText(getApplicationContext(), "Contact is clicked", Toast.LENGTH_SHORT).show();
+        }
+
+        drawer = findViewById(R.id.navigationView);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        drawer = findViewById(R.id.navigationView);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.activity_main_drawer, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+       /* if (item != null && item.getItemId() == android.R.id.home) {
+            if (drawer.isDrawerOpen(Gravity.RIGHT)) {
+                drawer.closeDrawer(Gravity.RIGHT);
+            }
+            else {
+                drawer.openDrawer(Gravity.RIGHT);
+            }
+        }
+        return false;*/
+        return super.onOptionsItemSelected(item);
+
+    }
+
+
     private class GetVideos extends AsyncTask<Void,Void,Void> {
         @Override
         protected Void doInBackground(Void... voids) {
