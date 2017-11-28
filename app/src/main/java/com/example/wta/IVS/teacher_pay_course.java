@@ -19,7 +19,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wta.IVS.videos.config;
@@ -105,6 +104,8 @@ public class teacher_pay_course extends YouTubeBaseActivity implements YouTubePl
         youTubeView = (YouTubePlayerView) findViewById(R.id.payment_teacher_image);
         youTubeView.initialize(config.YOUTUBE_API_KEY, this);
 
+
+
         buy = findViewById(R.id.buynow);
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,15 +124,6 @@ public class teacher_pay_course extends YouTubeBaseActivity implements YouTubePl
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        View header=navigationView.getHeaderView(0);
-        TextView profile=header.findViewById(R.id.profile_view);
-        profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),user_profile.class);
-                startActivity(intent);
-            }
-        });
     }
 
     public void videoClick(View view)

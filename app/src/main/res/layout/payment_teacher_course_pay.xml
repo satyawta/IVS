@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="10dp"
                 android:layout_alignTop="@+id/coursename"
                 android:background="@drawable/custom_rectangle_drawable"
                 android:paddingBottom="10dp"
@@ -228,7 +228,7 @@
                 android:layout_alignTop="@+id/course_reviews"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/reviews"
-                android:layout_marginRight="51dp"
+                android:layout_marginRight="20dp"
                 tools:ignore="ContentDescription,RtlSymmetry" />
 
             <TextView
@@ -316,8 +316,8 @@
                     android:id="@+id/about_course_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:layout_marginLeft="24.7dp"
-                    android:layout_marginEnd="22.3dp"
                     android:layout_marginRight="22.3dp"
                     android:letterSpacing="0.02"
                     android:lineSpacingExtra="0.7sp"
@@ -330,7 +330,6 @@
                     android:id="@+id/teacher_profile_ratingview_top"
                     android:layout_width="315.7dp"
                     android:layout_height="0.7dp"
-                    android:layout_marginBottom="24.3dp"
                     android:layout_below="@+id/about_course_desc"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="22.7dp" />
@@ -350,7 +349,6 @@
                     android:id="@+id/write_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="24.7dp"
                     android:layout_alignBaseline="@+id/rating_reviews"
                     android:layout_alignBottom="@+id/rating_reviews"
                     android:layout_alignParentRight="true"
@@ -374,24 +372,23 @@
                     android:id="@+id/review_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/textView2"
-                    android:layout_alignStart="@+id/textView2"
                     android:layout_below="@+id/reviews_count"
+                    android:layout_toEndOf="@+id/about_course"
+                    android:layout_toRightOf="@+id/about_course"
                     android:text="@string/review_value"
                     android:textColor="#252525"
                     android:textSize="25.1sp" />
 
                 <RatingBar
-                    android:id="@+id/ratingbar"
                     android:layout_width="wrap_content"
+                    android:id="@+id/ratingbar"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/review_no_rating"
-                    android:layout_alignStart="@+id/review_no_rating"
-                    android:layout_below="@+id/rating_reviews"
+
+                    android:layout_alignTop="@+id/reviews_count"
                     android:layout_marginTop="8dp"
                     android:numStars="5"
-                    android:rating="3"
                     android:stepSize="1.0"
+                    android:rating="3"
                     android:theme="@style/RatingBar" />
 
                 <View
@@ -417,9 +414,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/teacher_profile_ratingview_bottom"
-                    android:layout_marginTop="20dp"
-                    android:layout_toEndOf="@+id/review_no"
-                    android:layout_toRightOf="@+id/review_no"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="23dp"
                     android:text="@string/teacher_name"
                     android:textColor="#2b2b2b"
                     android:textSize="15.3sp" />
@@ -439,11 +436,9 @@
                     android:id="@+id/ratingbar_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/teachername_rating"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_toEndOf="@+id/review_no_rating"
-                    android:layout_toRightOf="@+id/review_no_rating"
+                    android:layout_alignLeft="@+id/ratingbar"
+                    android:layout_alignStart="@+id/ratingbar"
+                    android:layout_alignTop="@+id/review_no_rating"
                     android:numStars="5"
                     android:rating="3"
                     android:stepSize="1.0"
@@ -453,8 +448,6 @@
                     android:id="@+id/date_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="26dp"
-                    android:layout_marginEnd="26dp"
                     android:layout_alignLeft="@+id/write_review"
                     android:layout_alignStart="@+id/write_review"
                     android:layout_alignTop="@+id/teachername_rating"
@@ -490,7 +483,98 @@
                     android:layout_marginStart="77.3dp"
                     android:layout_marginEnd="24.3dp" />
 
+                <ImageView
+                    android:id="@+id/teacher_image_profile_rating_1"
+                    android:layout_width="44dp"
+                    android:layout_height="44.3dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_below="@+id/teacher_profile_ratingwindow_bottom_1"
+                    android:layout_marginTop="27.3dp"
+                    android:src="@drawable/teacher_image_hdpi"
+                    android:layout_marginStart="28dp"
+                    tools:ignore="ContentDescription" />
 
+                <TextView
+                    android:id="@+id/teachername_rating_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="293dp"
+                    android:layout_marginRight="293dp"
+                    android:layout_marginTop="248dp"
+                    android:text="@string/teacher_name"
+                    android:textColor="#2b2b2b"
+                    android:textSize="15.3sp" />
+
+                <TextView
+                    android:id="@+id/review_no_rating_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/rating_reviews"
+                    android:layout_alignRight="@+id/rating_reviews"
+                    android:layout_below="@+id/teachername_rating_1"
+                    android:text="@string/review_value"
+                    android:textColor="#252525"
+                    android:textSize="12.7sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingbar_review_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ratingbar"
+                    android:layout_alignStart="@+id/ratingbar"
+                    android:layout_alignTop="@+id/review_no_rating_1"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:stepSize="1.0"
+                    android:theme="@style/RatingBar" />
+
+                <TextView
+                    android:id="@+id/date_review_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/write_review"
+                    android:layout_alignStart="@+id/write_review"
+                    android:layout_alignTop="@+id/teachername_rating_1"
+                    android:text="@string/date_review"
+                    android:textColor="#252525"
+                    android:textSize="9.9sp" />
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#363535"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/about_course"
+                    android:layout_below="@+id/ratingbar_review"
+                    android:layout_marginLeft="83.7dp"
+                    android:layout_marginRight="29dp"
+                    android:paddingBottom="24.3dp"
+                    tools:ignore="UnusedAttribute"
+                    android:layout_marginStart="83.7dp"
+                    android:layout_marginEnd="29dp"
+                    android:id="@+id/textView2" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="#363535"
+                    android:letterSpacing="0.02"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/about_course"
+                    android:layout_below="@+id/ratingbar_review_1"
+                    android:layout_marginLeft="83.7dp"
+                    android:layout_marginRight="29dp"
+                    android:paddingBottom="24.3dp"
+                    tools:ignore="UnusedAttribute"
+                    android:layout_marginStart="83.7dp"
+                    android:layout_marginEnd="29dp"
+                    android:id="@+id/textView3" />
             </RelativeLayout>
             <android.support.v7.widget.RecyclerView
                 android:visibility="invisible"
@@ -503,7 +587,7 @@
         </RelativeLayout>
     </ScrollView>
 
-    <!--<RelativeLayout
+    <RelativeLayout
         android:gravity="bottom"
         android:id="@+id/bottomview"
         android:layout_alignParentBottom="true"
@@ -543,6 +627,6 @@
             android:layout_alignParentRight="true"
             android:background="@drawable/custom_button_drawable"
             android:text="Buy Now" />
-    </RelativeLayout>-->
+    </RelativeLayout>
 
 </RelativeLayout>

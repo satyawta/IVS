@@ -94,8 +94,6 @@ public class teacher_profile extends YouTubeBaseActivity implements YouTubePlaye
         youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
         youTubeView.initialize(config.YOUTUBE_API_KEY, this);
 
-        profile_footer = findViewById(R.id.profile_footer_teacher);
-        profileview = profile_footer.findViewById(R.id.view_course);
 
         View header=navigationView.getHeaderView(0);
         TextView profile=header.findViewById(R.id.profile_view);
@@ -106,6 +104,9 @@ public class teacher_profile extends YouTubeBaseActivity implements YouTubePlaye
                 startActivity(intent);
             }
         });
+
+        profile_footer = findViewById(R.id.profile_footer_teacher);
+        profileview = profile_footer.findViewById(R.id.view_course);
 
         profileview.setOnClickListener(new View.OnClickListener() {
             @Override
