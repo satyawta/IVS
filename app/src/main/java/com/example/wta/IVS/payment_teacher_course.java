@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,11 +25,14 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 public class payment_teacher_course extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener{
 
-    TextView videos;
+    Button videos;
     String video;
 
     private static final int RECOVERY_REQUEST = 1;
     private YouTubePlayerView youTubeView;
+    private Button aboutClick,videoClick;
+    RelativeLayout aboutView;
+    View videoView ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,7 +46,7 @@ public class payment_teacher_course extends YouTubeBaseActivity implements YouTu
         youTubeView = (YouTubePlayerView) findViewById(R.id.payment_teacher_image);
         youTubeView.initialize(config.YOUTUBE_API_KEY, this);
 
-        videos=findViewById(R.id.about_Courses);
+       /* videos=findViewById(R.id.about_Courses);
 
         videos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +55,27 @@ public class payment_teacher_course extends YouTubeBaseActivity implements YouTu
                 Intent intent=new Intent(getApplicationContext(),payment_teacher_videos.class);
                 startActivity(intent);
             }
-        });
+        });*/
+
+
+    }
+
+    public void aboutBtn(View view)
+    {
+        aboutClick.setBackgroundResource(R.drawable.my_button_bg);
+        videoClick.setBackgroundColor(getResources().getColor(R.color.white));
+
+        aboutView.setVisibility(View.VISIBLE);
+        videoView.setVisibility(View.INVISIBLE);
+    }
+
+    public void videoBtn(View view)
+    {
+        videoClick.setBackgroundResource(R.drawable.my_button_bg);
+        aboutClick.setBackgroundColor(getResources().getColor(R.color.white));
+
+        videoView.setVisibility(View.VISIBLE);
+        aboutView.setVisibility(View.INVISIBLE);
 
     }
 @Override

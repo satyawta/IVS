@@ -1,17 +1,7 @@
 package com.example.wta.IVS;
 
-import android.app.Dialog;
 import android.app.FragmentManager;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapShader;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.RectF;
-import android.graphics.Shader;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -20,25 +10,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.wta.IVS.adapters.RecyclerviewCourses;
-import com.example.wta.IVS.app.AppController;
 import com.example.wta.IVS.models.Model;
 import com.example.wta.IVS.models.video_model;
 
@@ -50,11 +31,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static com.facebook.FacebookSdk.getApplicationContext;
-
 public class landingscreen extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    ImageView img;
+
     TextView classname;
     private List<video_model> videos=new ArrayList<video_model>();
     public String class_id,class_page_link,class_page_matadata,class_page_description,class_teacher,class_language,class_name,class_description,class_cover,class_cost,class_duration,select_video_type,video_code,class_status;;
@@ -78,12 +57,23 @@ public class landingscreen extends AppCompatActivity implements NavigationView.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_profile_nav);
+
         navigationView = findViewById(R.id.nav_view);
-        img = findViewById(R.id.landingscreen_image);
+
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawer = findViewById(R.id.navigationView);
+
+        View header=navigationView.getHeaderView(0);
+        TextView profile=header.findViewById(R.id.profile_view);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),user_profile.class);
+                startActivity(intent);
+            }
+        });
 
 
         video=new ArrayList<>();
@@ -111,17 +101,24 @@ public class landingscreen extends AppCompatActivity implements NavigationView.O
             }
         });
 
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),user_profile.class);
+                startActivity(intent);
+            }
+        });
         new GetVideos().execute();
 
 
-        Bitmap mbitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.books_library_book_photography_copy)).getBitmap();
+        /*Bitmap mbitmap = ((BitmapDrawable) getResources().getDrawable(R.drawable.books_library_book_photography_copy)).getBitmap();
         Bitmap imageRounded = Bitmap.createBitmap(mbitmap.getWidth(), mbitmap.getHeight(), mbitmap.getConfig());
         Canvas canvas = new Canvas(imageRounded);
         Paint mpaint = new Paint();
         mpaint.setAntiAlias(true);
         mpaint.setShader(new BitmapShader(mbitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP));
         canvas.drawRoundRect((new RectF(0, 0, mbitmap.getWidth(), mbitmap.getHeight())), 100, 100, mpaint);// Round Image Corner 100 100 100 100
-        img.setImageBitmap(imageRounded);
+        img.setImageBitmap(imageRounded);*/
 
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -173,7 +170,7 @@ public class landingscreen extends AppCompatActivity implements NavigationView.O
         return true;
     }
 
-    @Override
+ @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -188,10 +185,7 @@ public class landingscreen extends AppCompatActivity implements NavigationView.O
         }
         return false;*/
         return super.onOptionsItemSelected(item);
-
     }
-
-
     private class GetVideos extends AsyncTask<Void,Void,Void> {
         @Override
         protected Void doInBackground(Void... voids) {

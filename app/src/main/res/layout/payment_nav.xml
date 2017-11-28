@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navigationView"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/paynow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/view_text"
+                android:layout_width="185dp"
+                android:text="Share the App"
+                android:textSize="15.8sp"
+                android:textColor="#ffffff"
+                android:paddingLeft="25dp"
+                android:textAllCaps="false"
+                android:letterSpacing="0.03"
+                android:layout_height="43.7dp"
+                android:layout_marginBottom="21.3dp"
+                android:layout_marginTop="34.7dp"
+                android:drawableLeft="@drawable/share_1600"
+                android:layout_marginLeft="34.7dp"
+                android:background="@drawable/custom_button_drawable" />
+        </LinearLayout>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

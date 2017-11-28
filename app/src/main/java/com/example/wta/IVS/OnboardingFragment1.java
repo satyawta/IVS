@@ -20,10 +20,10 @@ import javax.annotation.Nullable;
 
 public class OnboardingFragment1 extends Activity {
 
-    /*ImageView onboarding_i;*/
+   /* ImageView onboarding_i;*/
     Button btn;
 
-    /*public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+   /* public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.onborading_i, container, false);
 
         onboarding_i = view.findViewById(R.id.onboarding_i);
@@ -36,7 +36,7 @@ public class OnboardingFragment1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.onborading_i);
 
-    /*    btn = findViewById(R.id.onboarding_button_i);
+        btn = findViewById(R.id.onboarding_button_i);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +45,7 @@ public class OnboardingFragment1 extends Activity {
                 Intent intent = new Intent(getApplicationContext(), OnboardingFragment2.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
     }
 }

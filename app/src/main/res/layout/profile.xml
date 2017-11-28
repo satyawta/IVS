@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
 
     <ImageButton
         android:id="@+id/profile_image"
@@ -26,9 +29,9 @@
         android:layout_centerHorizontal="true"
         android:paddingTop="19dp" />
 
-    <EditText
+    <TextView
         android:layout_width="315.7dp"
-        android:layout_height="0.7dp"
+        android:layout_height="wrap_content"
         android:hint="@string/username"
         android:id="@+id/username_profile"
         android:inputType="text"
@@ -37,9 +40,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="108.7dp" />
 
-    <EditText
+    <TextView
         android:layout_width="315.7dp"
-        android:layout_height="0.7dp"
+        android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:text="@string/user_password"
         android:id="@+id/username_password"
@@ -47,9 +50,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="67.7dp" />
 
-    <EditText
+    <TextView
         android:layout_width="315.7dp"
-        android:layout_height="0.7dp"
+        android:layout_height="wrap_content"
         android:inputType="number"
         android:text="@string/user_phno"
         android:id="@+id/username_phno"
@@ -71,3 +74,4 @@
         android:layout_marginBottom="47.7dp" />
 
 </RelativeLayout>
+</ScrollView>

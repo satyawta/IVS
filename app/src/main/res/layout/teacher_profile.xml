@@ -2,31 +2,34 @@
 <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-    <!--<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:titleTextColor="#ffffff"
         android:minHeight="?attr/actionBarSize"
-        android:background="?attr/colorPrimary" />-->
+        android:background="?attr/colorPrimary" />
 
-<ScrollView
-    android:id="@+id/scroll_profile"
-    android:layout_below="@+id/toolbar"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    <ScrollView
+        android:layout_above="@+id/profile_footer_teacher"
+        android:id="@+id/scroll_profile"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/profile_layout">
-
-        <FrameLayout
-            android:id="@+id/payment_teacher_frame"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
+            android:id="@+id/profile_layout">
+
+            <FrameLayout
+                android:id="@+id/payment_teacher_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
 
 
 
@@ -61,285 +64,285 @@
                      tools:text="Watch Course Preview"
                      android:layout_marginStart="130dp"
                      android:layout_marginEnd="111.7dp" />-->
-        </FrameLayout>
+            </FrameLayout>
 
-        <TextView
-            android:id="@+id/coursename"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/payment_teacher_frame"
-            android:layout_marginLeft="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="23.7dp"
-            android:fontFamily="@font/helveticaneueltstd_md"
-            android:text="@string/coursename"
-            android:textColor="#2b2b2b"
-            android:textSize="25.4sp" />
-
-        <TextView
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/view_teacher_profile"
-            android:layout_alignEnd="@+id/course_count"
-            android:layout_alignRight="@+id/course_count"
-            android:layout_marginEnd="11dp"
-            android:layout_marginRight="11dp"
-            android:background="@drawable/custom_rectangle_drawable"
-            android:paddingBottom="10dp"
-            android:paddingLeft="10.3dp"
-            android:paddingRight="9.7dp"
-            android:paddingStart="10.3dp"
-            android:paddingTop="9.7dp"
-            android:text="@string/review_value"
-            android:textColor="#ffffff"
-            android:textSize="22sp" />
-
-        <View
-            android:id="@+id/view_teacher_profile"
-            android:layout_width="315.7dp"
-            android:layout_height="0.7dp"
-            android:layout_below="@+id/coursename"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16.3dp"
-            android:layout_marginTop="23dp"
-            android:background="#d1d4da" />
-
-        <include
-            android:id="@+id/teacher_cards"
-            layout="@layout/teacher_cards"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/view_teacher_profile"
-            android:layout_marginLeft="22dp" />
-
-        <ImageView
-            android:id="@+id/teacher_image_profile"
-            android:layout_width="44dp"
-            android:layout_height="44.3dp"
-            android:layout_below="@+id/teacher_cards"
-            android:layout_marginLeft="28dp"
-            android:layout_marginTop="27.3dp"
-            android:src="@drawable/teacher_image_hdpi"
-            tools:ignore="ContentDescription,RtlHardcoded" />
-
-        <TextView
-            android:id="@+id/teacher_name_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/teacher_cards"
-            android:layout_marginLeft="13dp"
-            android:layout_marginTop="31.7dp"
-            android:layout_toRightOf="@+id/teacher_image_profile"
-            android:text="@string/teacher_name"
-            android:textColor="#2b2b2b"
-            android:textSize="22sp"/>
-
-        <TextView
-            android:id="@+id/course_language_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/teacher_name_profile"
-            android:layout_marginLeft="13dp"
-            android:layout_toEndOf="@+id/teacher_image_profile"
-            android:layout_toRightOf="@+id/teacher_image_profile"
-            android:paddingTop="@dimen/paddint_top_teacher_profile"
-            android:text="@string/language"
-            android:textColor="#2b2b2b"
-            android:textSize="9.9sp"/>
-
-        <ImageView
-            android:id="@+id/course_duration"
-            android:layout_width="19.7dp"
-            android:layout_height="19.7dp"
-            android:layout_alignLeft="@+id/course_duration_text"
-            android:layout_alignStart="@+id/course_duration_text"
-            android:layout_below="@+id/course_language_profile"
-            android:layout_marginLeft="18dp"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/play_orange_hdpi"
-            android:paddingLeft="100.3dp"
-            android:paddingStart="100.3dp"
-            tools:ignore="ContentDescription,RtlSymmetry" />
-
-        <TextView
-            android:id="@+id/course_duration_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/course_language_profile"
-            android:layout_below="@+id/course_duration"
-            android:layout_marginTop="10dp"
-            android:text="@string/videos_count"
-            android:textColor="#2b2b2b" />
-
-        <ImageView
-            android:id="@+id/course_rating"
-            android:layout_width="19.7dp"
-            android:layout_height="19.7dp"
-            android:layout_alignLeft="@+id/course_rating_text"
-            android:layout_alignStart="@+id/course_rating_text"
-            android:layout_alignTop="@+id/course_duration"
-            android:layout_marginLeft="13dp"
-            android:layout_marginStart="13dp"
-            android:background="@drawable/clock"
-            android:paddingLeft="41dp"
-            android:paddingStart="41dp"/>
-
-        <TextView
-            android:id="@+id/course_rating_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/course_duration_text"
-            android:layout_alignBottom="@+id/course_duration_text"
-            android:layout_toEndOf="@+id/course_language_profile"
-            android:layout_toRightOf="@+id/course_language_profile"
-            android:text="@string/course_duration"
-            android:textColor="#2b2b2b" />
-
-        <ImageView
-            android:id="@+id/course_reviews"
-            android:layout_width="19.7dp"
-            android:layout_height="19.7dp"
-            android:layout_above="@+id/course_rating_text"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_toEndOf="@+id/teacher_name_profile"
-            android:layout_toRightOf="@+id/teacher_name_profile"
-            android:background="@drawable/star_rating_empty"
-            android:paddingLeft="44.7dp"
-            android:paddingStart="44.7dp"/>
-
-        <TextView
-            android:id="@+id/course_reviews_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/course_duration_text"
-            android:layout_alignBottom="@+id/course_duration_text"
-            android:layout_toEndOf="@+id/course_rating_text"
-            android:layout_toRightOf="@+id/course_rating_text"
-            android:paddingLeft="21.3dp"
-            android:paddingStart="21.3dp"
-            android:text="@string/rating"
-            android:textColor="#2b2b2b"/>
-
-        <ImageView
-            android:id="@+id/course_count"
-            android:layout_width="19.7dp"
-            android:layout_height="19.7dp"
-            android:layout_alignEnd="@+id/course_count_text"
-            android:layout_alignRight="@+id/course_count_text"
-            android:layout_alignTop="@+id/course_reviews"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="52dp"
-            android:background="@drawable/reviews"
-            android:paddingLeft="44.7dp"
-            android:paddingStart="44.7dp"/>
-
-        <TextView
-            android:id="@+id/course_count_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/course_reviews_text"
-            android:layout_alignBottom="@+id/course_reviews_text"
-            android:layout_toEndOf="@+id/course_reviews_text"
-            android:layout_toRightOf="@+id/course_reviews_text"
-            android:paddingLeft="21.3dp"
-            android:paddingStart="21.3dp"
-            android:text="@string/reviews_count"
-            android:textColor="#2b2b2b"/>
-
-        <!--<TabHost
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tabhost"
-        android:paddingTop="22.7dp"
-        android:layout_marginLeft="24.7dp"
-        android:layout_below="@id/course_count_text">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-        <TabWidget
-            android:id="@android:id/tabs"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"/>
-        </LinearLayout>
-    </TabHost>-->
-        <View
-            android:id="@+id/teacher_profile_view_top"
-            android:layout_width="match_parent"
-            android:layout_height="0.7dp"
-            android:layout_below="@+id/course_rating_text"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="22.7dp" />
-
-        <LinearLayout
-            android:background="#ffffff"
-            android:orientation="horizontal"
-            android:id="@+id/layout_tab_teacher_profile"
-            android:layout_below="@+id/teacher_profile_view_top"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:background="@drawable/my_button_bg"
-                android:layout_weight="0.5"
-                android:id="@+id/about"
+            <TextView
+                android:id="@+id/coursename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="About"/>
-            <Button
-                android:background="#ffffff"
-                android:text="Videos"
-                android:id="@+id/videos"
-                android:layout_weight="0.5"
+                android:layout_below="@id/payment_teacher_frame"
+                android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="23.7dp"
+                android:fontFamily="@font/helveticaneueltstd_md"
+                android:text="@string/coursename"
+                android:textColor="#2b2b2b"
+                android:textSize="25.4sp" />
+
+            <TextView
+                android:id="@+id/rating"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/course_count"
+                android:layout_alignRight="@+id/course_count"
+                android:layout_alignTop="@+id/coursename"
+                android:background="@drawable/custom_rectangle_drawable"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10.3dp"
+                android:paddingRight="9.7dp"
+                android:paddingStart="10.3dp"
+                android:paddingTop="9.7dp"
+                android:text="@string/review_value"
+                android:textColor="#ffffff"
+                android:textSize="22sp" />
 
-        <View
-            android:id="@+id/teacher_profile_view_bottom"
-            android:layout_width="match_parent"
-            android:layout_height="0.7dp"
-            android:layout_below="@+id/layout_tab_teacher_profile"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="22.7dp" />
+            <View
+                android:id="@+id/view_teacher_profile"
+                android:layout_width="315.7dp"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/coursename"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16.3dp"
+                android:layout_marginTop="23dp"
+                android:background="#d1d4da" />
 
-        <TextView
-            android:id="@+id/about_course_desc"
+            <include
+                android:id="@+id/teacher_cards"
+                layout="@layout/teacher_cards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/view_teacher_profile"
+                android:layout_marginLeft="22dp" />
+
+            <ImageView
+                android:id="@+id/teacher_image_profile"
+                android:layout_width="44dp"
+                android:layout_height="44.3dp"
+                android:layout_below="@+id/teacher_cards"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="27.3dp"
+                android:src="@drawable/teacher_image_hdpi"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/teacher_name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/teacher_cards"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="31.7dp"
+                android:layout_toRightOf="@+id/teacher_image_profile"
+                android:text="@string/teacher_name"
+                android:textColor="#2b2b2b"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/course_language_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/teacher_name_profile"
+                android:layout_marginLeft="13dp"
+                android:layout_toEndOf="@+id/teacher_image_profile"
+                android:layout_toRightOf="@+id/teacher_image_profile"
+                android:paddingTop="@dimen/paddint_top_teacher_profile"
+                android:text="@string/language"
+                android:textColor="#2b2b2b"
+                android:textSize="9.9sp"/>
+
+            <ImageView
+                android:id="@+id/course_duration"
+                android:layout_width="19.7dp"
+                android:layout_height="19.7dp"
+                android:layout_alignLeft="@+id/course_duration_text"
+                android:layout_alignStart="@+id/course_duration_text"
+                android:layout_below="@+id/course_language_profile"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/play_orange_hdpi"
+                android:paddingLeft="100.3dp"
+                android:paddingStart="100.3dp"
+                tools:ignore="ContentDescription,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/course_duration_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/course_language_profile"
+                android:layout_below="@+id/course_duration"
+                android:layout_marginTop="10dp"
+                android:text="@string/videos_count"
+                android:textColor="#2b2b2b" />
+
+            <ImageView
+                android:id="@+id/course_rating"
+                android:layout_width="19.7dp"
+                android:layout_height="19.7dp"
+                android:layout_alignLeft="@+id/course_rating_text"
+                android:layout_alignStart="@+id/course_rating_text"
+                android:layout_alignTop="@+id/course_duration"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
+                android:background="@drawable/clock"
+                android:paddingLeft="41dp"
+                android:paddingStart="41dp"/>
+
+            <TextView
+                android:id="@+id/course_rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/course_duration_text"
+                android:layout_alignBottom="@+id/course_duration_text"
+                android:layout_toEndOf="@+id/course_language_profile"
+                android:layout_toRightOf="@+id/course_language_profile"
+                android:text="@string/course_duration"
+                android:textColor="#2b2b2b" />
+
+            <ImageView
+                android:id="@+id/course_reviews"
+                android:layout_width="19.7dp"
+                android:layout_height="19.7dp"
+                android:layout_above="@+id/course_rating_text"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/teacher_name_profile"
+                android:layout_toRightOf="@+id/teacher_name_profile"
+                android:background="@drawable/star_rating_empty"
+                android:paddingLeft="44.7dp"
+                android:paddingStart="44.7dp"/>
+
+            <TextView
+                android:id="@+id/course_reviews_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/course_duration_text"
+                android:layout_alignBottom="@+id/course_duration_text"
+                android:layout_toEndOf="@+id/course_rating_text"
+                android:layout_toRightOf="@+id/course_rating_text"
+                android:paddingLeft="21.3dp"
+                android:paddingStart="21.3dp"
+                android:text="@string/rating"
+                android:textColor="#2b2b2b"/>
+
+            <ImageView
+                android:id="@+id/course_count"
+                android:layout_width="19.7dp"
+                android:layout_height="19.7dp"
+                android:layout_alignEnd="@+id/course_count_text"
+                android:layout_alignRight="@+id/course_count_text"
+                android:layout_alignTop="@+id/course_reviews"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="52dp"
+                android:background="@drawable/reviews"
+                android:paddingLeft="44.7dp"
+                android:paddingStart="44.7dp"/>
+
+            <TextView
+                android:id="@+id/course_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/course_reviews_text"
+                android:layout_alignBottom="@+id/course_reviews_text"
+                android:layout_toEndOf="@+id/course_reviews_text"
+                android:layout_toRightOf="@+id/course_reviews_text"
+                android:paddingLeft="21.3dp"
+                android:paddingStart="21.3dp"
+                android:text="@string/reviews_count"
+                android:textColor="#2b2b2b"/>
+
+            <!--<TabHost
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/teacher_profile_view_bottom"
+            android:id="@+id/tabhost"
+            android:paddingTop="22.7dp"
             android:layout_marginLeft="24.7dp"
-            android:layout_marginRight="22.3dp"
-            android:layout_marginStart="24.7dp"
-            android:letterSpacing="0.02"
-            android:lineSpacingExtra="0.7sp"
-            android:text="@string/about_course"
-            android:textColor="#363535"
-            android:textSize="15.3sp" />
+            android:layout_below="@id/course_count_text">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+            </LinearLayout>
+        </TabHost>-->
+            <View
+                android:id="@+id/teacher_profile_view_top"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/course_rating_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22.7dp" />
 
-<include layout="@layout/course_cards"
-    android:id="@+id/course_cards"
-    android:layout_width="142.3dp"
-    android:layout_height="192.7dp"
-    android:layout_marginLeft="22dp"
-    android:layout_marginTop="16.7dp"
-    android:layout_below="@+id/about_course_desc"/>
+            <!--<LinearLayout
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:id="@+id/layout_tab_teacher_profile"
+                android:layout_below="@+id/teacher_profile_view_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="@drawable/my_button_bg"
+                    android:layout_weight="0.5"
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"/>
+                <Button
+                    android:background="#ffffff"
+                    android:text="Videos"
+                    android:id="@+id/videos"
+                    android:layout_weight="0.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
-    <include layout="@layout/profile_footer"
+            <View
+                android:id="@+id/teacher_profile_view_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_below="@+id/layout_tab_teacher_profile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22.7dp" />-->
+
+            <TextView
+                android:id="@+id/about_course_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/teacher_profile_view_top"
+                android:layout_marginLeft="24.7dp"
+                android:layout_marginRight="22.3dp"
+                android:layout_marginEnd="22.3dp"
+                android:layout_marginStart="24.7dp"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="0.7sp"
+                android:text="@string/about_course"
+                android:textColor="#363535"
+                android:textSize="15.3sp" />
+
+            <include
+                layout="@layout/course_cards"
+                android:id="@+id/course_cards"
+                android:layout_width="142.3dp"
+                android:layout_height="192.7dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="16.7dp"
+                android:layout_below="@+id/about_course_desc"/>
+        </RelativeLayout>
+    </ScrollView>
+    <include
+        layout="@layout/profile_footer"
         android:layout_height="68.3dp"
         android:layout_width="360dp"
         android:id="@+id/profile_footer_teacher"
         android:layout_alignParentBottom="true"
-        android:layout_below="@id/course_cards"
         android:layout_centerHorizontal="true"/>
-    </RelativeLayout>
-</ScrollView>
+
 </RelativeLayout>

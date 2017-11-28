@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <RelativeLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
 
-        <TextView
-            android:id="@+id/coursename"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="23.7dp"
-            android:fontFamily="@font/helveticaneueltstd_md"
-            android:text="@string/coursename"
-            android:textColor="#2b2b2b"
-            android:textSize="25.4sp" />
+    <ScrollView
+        android:layout_above="@+id/bottomview"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/coursename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="23.7dp"
+                android:fontFamily="@font/helveticaneueltstd_md"
+                android:text="@string/coursename"
+                android:textColor="#2b2b2b"
+                android:textSize="25.4sp" />
 
             <TextView
                 android:id="@+id/rating"
@@ -35,230 +48,239 @@
                 android:textColor="#ffffff"
                 android:textSize="22sp" />
 
-        <TextView
-            android:id="@+id/ordersummary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/coursename"
-            android:layout_marginLeft="23dp"
-            android:fontFamily="@font/helveticaneueltstd_md"
-            android:paddingBottom="28dp"
-            android:paddingTop="30.3dp"
-            android:text="Order Summary"
-            android:textColor="#2b2b2b"
-            android:textSize="15.5sp" />
+            <TextView
+                android:id="@+id/ordersummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/coursename"
+                android:layout_marginLeft="23dp"
+                android:fontFamily="@font/helveticaneueltstd_md"
+                android:paddingBottom="28dp"
+                android:paddingTop="30.3dp"
+                android:text="Order Summary"
+                android:textColor="#2b2b2b"
+                android:textSize="15.5sp" />
 
-        <ImageView
-            android:id="@+id/teacher_image"
-            android:layout_width="44dp"
-            android:layout_height="44.3dp"
-            android:layout_below="@+id/ordersummary"
-            android:layout_marginLeft="23.7dp"
-            android:background="@drawable/image_circle"
-            android:src="@drawable/teacher_image_hdpi" />
+            <ImageView
+                android:id="@+id/teacher_image"
+                android:layout_width="44dp"
+                android:layout_height="44.3dp"
+                android:layout_below="@+id/ordersummary"
+                android:layout_marginLeft="23.7dp"
+                android:background="@drawable/image_circle"
+                android:src="@drawable/teacher_image_hdpi" />
 
-        <TextView
-            android:id="@+id/teacher_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ordersummary"
-            android:layout_toRightOf="@+id/teacher_image"
-            android:fontFamily="@font/helveticaneueltstd_md"
-            android:paddingLeft="12.7dp"
-            android:text="Srimathi Devi Rani"
-            android:textColor="#2b2b2b"
-            android:textSize="18.7sp" />
+            <TextView
+                android:id="@+id/teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ordersummary"
+                android:layout_toRightOf="@+id/teacher_image"
+                android:fontFamily="@font/helveticaneueltstd_md"
+                android:paddingLeft="12.7dp"
+                android:text="Srimathi Devi Rani"
+                android:textColor="#2b2b2b"
+                android:textSize="18.7sp" />
 
-        <TextView
-            android:id="@+id/course_language"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/teacher_name"
-            android:layout_toRightOf="@id/teacher_image"
-            android:fontFamily="@font/helveticaneueltstd_lt"
-            android:paddingLeft="13dp"
-            android:paddingTop="9dp"
-            android:text="Language: Telugu"
-            android:textColor="#2b2b2b"
-            android:textSize="9.9sp" />
+            <TextView
+                android:id="@+id/course_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/teacher_name"
+                android:layout_toRightOf="@id/teacher_image"
+                android:fontFamily="@font/helveticaneueltstd_lt"
+                android:paddingLeft="13dp"
+                android:paddingTop="9dp"
+                android:text="Language: Telugu"
+                android:textColor="#2b2b2b"
+                android:textSize="9.9sp" />
 
-        <TextView
-            android:id="@+id/changeteacher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/teacher_name"
-            android:layout_alignEnd="@+id/course_amount"
-            android:layout_alignRight="@+id/course_amount"
-            android:fontFamily="@font/helveticaneueltstd_lt"
-            android:text="Change Teacher"
-            android:textColor="#ff8635"
-            android:textSize="9.9sp" />
+            <TextView
+                android:id="@+id/changeteacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/teacher_name"
+                android:layout_alignEnd="@+id/course_amount"
+                android:layout_alignRight="@+id/course_amount"
+                android:fontFamily="@font/helveticaneueltstd_lt"
+                android:text="Change Teacher"
+                android:textColor="#ff8635"
+                android:textSize="9.9sp" />
 
-        <TextView
-            android:id="@+id/coursefee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/teacher_image"
-            android:layout_marginLeft="24.3dp"
-            android:fontFamily="@font/helveticaneueltstd_lt"
-            android:gravity="center_horizontal"
-            android:paddingTop="24.7dp"
-            android:text="Course Fee"
-            android:textColor="#000000"
-            android:textSize="15.3sp" />
+            <TextView
+                android:id="@+id/coursefee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/teacher_image"
+                android:layout_marginLeft="24.3dp"
+                android:fontFamily="@font/helveticaneueltstd_lt"
+                android:gravity="center_horizontal"
+                android:paddingTop="24.7dp"
+                android:text="Course Fee"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
 
-        <ImageView
-            android:id="@+id/currencysymbol"
-            android:layout_width="8.7dp"
-            android:layout_height="12.7dp"
-            android:layout_alignBottom="@+id/course_amount"
-            android:layout_marginEnd="9dp"
-            android:layout_marginRight="9dp"
-            android:layout_toLeftOf="@+id/changeteacher"
-            android:layout_toStartOf="@+id/changeteacher"
-            android:background="@drawable/indian_rupee_symbol"
-            android:paddingRight="16.3dp" />
+            <ImageView
+                android:id="@+id/currencysymbol"
+                android:layout_width="8.7dp"
+                android:layout_height="12.7dp"
+                android:layout_alignBottom="@+id/course_amount"
+                android:layout_marginEnd="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_toLeftOf="@+id/changeteacher"
+                android:layout_toStartOf="@+id/changeteacher"
+                android:background="@drawable/indian_rupee_symbol"
+                android:paddingRight="16.3dp" />
 
-        <TextView
-            android:id="@+id/course_amount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/coursefee"
-            android:layout_alignEnd="@+id/rating"
-            android:layout_alignRight="@+id/rating"
-            android:fontFamily="@font/helveticaneueltstd_lt"
-            android:gravity="center_horizontal"
-            android:text="2,000"
-            android:textColor="#000000"
-            android:textSize="15.3sp" />
+            <TextView
+                android:id="@+id/course_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/coursefee"
+                android:layout_alignEnd="@+id/rating"
+                android:layout_alignRight="@+id/rating"
+                android:fontFamily="@font/helveticaneueltstd_lt"
+                android:gravity="center_horizontal"
+                android:text="2,000"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
 
-        <TextView
-            android:id="@+id/conviencefee"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/coursefee"
-            android:layout_marginLeft="24.3dp"
-            android:fontFamily="@font/helveticaneueltstd_lt"
-            android:gravity="center_horizontal"
-            android:paddingTop="25.7dp"
-            android:text="Convience fee (10%)"
-            android:textColor="#000000"
-            android:textSize="15.3sp" />
+            <TextView
+                android:id="@+id/conviencefee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coursefee"
+                android:layout_marginLeft="24.3dp"
+                android:fontFamily="@font/helveticaneueltstd_lt"
+                android:gravity="center_horizontal"
+                android:paddingTop="25.7dp"
+                android:text="Convience fee (10%)"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
 
-        <ImageView
-            android:id="@+id/currencysymbol1"
-            android:layout_width="8.7dp"
-            android:layout_height="12.7dp"
-            android:layout_alignBottom="@+id/convience_amount"
-            android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
-            android:layout_toLeftOf="@+id/changeteacher"
-            android:layout_toStartOf="@+id/changeteacher"
-            android:background="@drawable/indian_rupee_symbol"
-            android:paddingRight="16.3dp" />
+            <ImageView
+                android:id="@+id/currencysymbol1"
+                android:layout_width="8.7dp"
+                android:layout_height="12.7dp"
+                android:layout_alignBottom="@+id/convience_amount"
+                android:layout_marginEnd="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@+id/changeteacher"
+                android:layout_toStartOf="@+id/changeteacher"
+                android:background="@drawable/indian_rupee_symbol"
+                android:paddingRight="16.3dp" />
 
-        <TextView
-            android:id="@+id/convience_amount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/rating"
-            android:layout_alignRight="@+id/rating"
-            android:layout_below="@+id/course_amount"
-            android:fontFamily="@font/helveticaneueltstd_lt"
-            android:gravity="center_horizontal"
-            android:paddingTop="25.3dp"
-            android:text="250"
-            android:textColor="#000000"
-            android:textSize="15.3sp" />
+            <TextView
+                android:id="@+id/convience_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/rating"
+                android:layout_alignRight="@+id/rating"
+                android:layout_below="@+id/course_amount"
+                android:fontFamily="@font/helveticaneueltstd_lt"
+                android:gravity="center_horizontal"
+                android:paddingTop="25.3dp"
+                android:text="250"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
 
-        <View
-            android:id="@+id/view_teacher_pay_top"
-            android:layout_width="370.7dp"
-            android:layout_height="0.7dp"
-            android:background="#d1d4da"
-            android:layout_below="@+id/conviencefee"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16.7dp" />
+            <View
+                android:id="@+id/view_teacher_pay_top"
+                android:layout_width="370.7dp"
+                android:layout_height="0.7dp"
+                android:background="#d1d4da"
+                android:layout_below="@+id/conviencefee"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16.7dp" />
 
-        <TextView
-            android:id="@+id/grandtotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/view_teacher_pay_top"
-            android:layout_marginLeft="24dp"
-            android:fontFamily="@font/helveticaneueltstd_lt"
-            android:gravity="center_horizontal"
-            android:paddingTop="20dp"
-            android:text="Grand Total"
-            android:textColor="#000000"
-            android:textSize="18.7sp" />
+            <TextView
+                android:id="@+id/grandtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_teacher_pay_top"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/helveticaneueltstd_lt"
+                android:gravity="center_horizontal"
+                android:paddingTop="20dp"
+                android:text="Grand Total"
+                android:textColor="#000000"
+                android:textSize="18.7sp" />
 
-        <ImageView
-            android:id="@+id/currencysymbol2"
-            android:layout_width="8.7dp"
-            android:layout_height="12.7dp"
-            android:layout_alignBottom="@+id/grandtotal"
-            android:layout_alignLeft="@+id/currencysymbol1"
-            android:layout_alignStart="@+id/currencysymbol1"
-            android:layout_marginBottom="7dp"
-            android:background="@drawable/indian_rupee_symbol"
-            android:paddingRight="16.3dp" />
+            <ImageView
+                android:id="@+id/currencysymbol2"
+                android:layout_width="8.7dp"
+                android:layout_height="12.7dp"
+                android:layout_alignBottom="@+id/grandtotal"
+                android:layout_alignLeft="@+id/currencysymbol1"
+                android:layout_alignStart="@+id/currencysymbol1"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/indian_rupee_symbol"
+                android:paddingRight="16.3dp" />
 
-        <TextView
-            android:id="@+id/totalamount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/course_amount"
-            android:layout_alignRight="@+id/course_amount"
-            android:layout_below="@+id/view_teacher_pay_top"
-            android:fontFamily="@font/helveticaneueltstd_md"
-            android:gravity="center_horizontal"
-            android:paddingTop="25dp"
-            android:text="2250"
-            android:textColor="#000000"
-            android:textSize="15.3sp" />
+            <TextView
+                android:id="@+id/totalamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/course_amount"
+                android:layout_alignRight="@+id/course_amount"
+                android:layout_below="@+id/view_teacher_pay_top"
+                android:fontFamily="@font/helveticaneueltstd_md"
+                android:gravity="center_horizontal"
+                android:paddingTop="25dp"
+                android:text="2250"
+                android:textColor="#000000"
+                android:textSize="15.3sp" />
 
-        <View
-            android:id="@+id/view_teacher_pay_down"
-            android:layout_width="370.7dp"
-            android:layout_height="0.7dp"
-            android:background="#d1d4da"
-            android:layout_below="@+id/grandtotal"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="17dp" />
+            <View
+                android:id="@+id/view_teacher_pay_down"
+                android:layout_width="370.7dp"
+                android:layout_height="0.7dp"
+                android:background="#d1d4da"
+                android:layout_below="@+id/grandtotal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="17dp" />
 
-        <TextView
-            android:id="@+id/t_c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/view_teacher_pay_down"
-            android:layout_marginLeft="24dp"
-            android:fontFamily="@font/helveticaneueltstd_md"
-            android:paddingTop="21.3dp"
-            android:text="Terms and Conditions"
-            android:textColor="#2b2b2b"
-            android:textSize="15.5sp" />
+            <TextView
+                android:id="@+id/t_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_teacher_pay_down"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/helveticaneueltstd_md"
+                android:paddingTop="21.3dp"
+                android:text="Terms and Conditions"
+                android:textColor="#2b2b2b"
+                android:textSize="15.5sp" />
 
-        <TextView
-            android:id="@+id/terms_conditions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/t_c"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="25.7dp"
-            android:fontFamily="@font/helveticaneueltstd_lt"
-            android:letterSpacing="0.02"
-            android:lineSpacingExtra="4sp"
-            android:paddingTop="21.3dp"
-            android:text="@string/terms_conditions"
-            android:textColor="#363535"
-            android:textSize="12sp" />
+            <TextView
+                android:id="@+id/terms_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t_c"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="25.7dp"
+                android:fontFamily="@font/helveticaneueltstd_lt"
+                android:letterSpacing="0.02"
+                android:lineSpacingExtra="4sp"
+                android:paddingTop="21.3dp"
+                android:text="@string/terms_conditions"
+                android:textColor="#363535"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:id="@+id/bottomview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
         <View
             android:id="@+id/static_footer_pay_noe"
             android:layout_width="370.7dp"
             android:layout_height="0.7dp"
             android:background="#d1d4da"
-            android:layout_below="@+id/terms_conditions"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16.7dp" />
         <TextView
@@ -279,8 +301,7 @@
             android:layout_width="155dp"
             android:layout_height="42.7dp"
             android:layout_below="@+id/static_footer_pay_noe"
-            android:layout_alignEnd="@+id/totalamount"
-            android:layout_alignRight="@+id/totalamount"
+            android:layout_alignParentRight="true"
             android:layout_gravity="right|bottom"
             android:layout_marginEnd="6dp"
             android:layout_marginTop="16.7dp"
@@ -292,4 +313,4 @@
             android:textColor="#ffffff"
             android:textSize="15.8sp" />
     </RelativeLayout>
-</ScrollView>
+</RelativeLayout>

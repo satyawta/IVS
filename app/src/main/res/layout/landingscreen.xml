@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        app:titleTextColor="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
@@ -16,36 +17,60 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:src="@drawable/menu_alt_512" />-->
-    <FrameLayout
+
+    <LinearLayout
         android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="328.7dp"
+        android:layout_height="162.3dp"
+        android:orientation="vertical"
+        android:layout_marginTop="15.7dp"
+        android:gravity="bottom"
+        android:background="@drawable/books_library_book_photography_copy"
         android:id="@+id/landingframe"
         android:layout_centerHorizontal="true">
 
-
-        <ImageView
-            android:layout_width="328.7dp"
-            android:layout_height="162.3dp"
-            android:layout_marginTop="6.7dp"
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15.7dp"
             android:layout_marginLeft="15.7dp"
             android:layout_marginRight="15.7dp"
             android:layout_gravity="center"
             android:id="@+id/landingscreen_image"
-            android:src="@drawable/books_library_book_photography_copy" />
+            android:src="@drawable/books_library_book_photography_copy" />-->
 
         <TextView
-            android:layout_width="233.7dp"
-            android:layout_height="59.3dp"
-            android:layout_gravity="left|bottom"
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.7dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/helveticaneueltstd_lt"
+            android:text="Welcome"
+            android:textColor="#ffffff"
+            android:textSize="15.5sp" />
+        <TextView
             android:id="@+id/username"
-            android:layout_marginLeft="50.3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.7dp"
+            android:layout_marginBottom="4dp"
             android:fontFamily="@font/helveticaneueltstd_md"
-            android:text="@string/welcome_user"
+            android:text="@string/username"
+            android:textColor="#ffffff"
+            android:textSize="22.1sp" />
+        <TextView
+            android:id="@+id/startcourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16.7dp"
+            android:layout_marginBottom="14dp"
+            android:fontFamily="@font/helveticaneueltstd_lt"
+            android:text="Start Taking Courses!"
             android:textColor="#ffffff"
             android:textSize="15.5sp" />
 
-    </FrameLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/landingcourses"
@@ -72,14 +97,13 @@
         android:layout_marginTop="25dp"
         android:src="@drawable/indicator_selected" />
 
-    <android.support.v7.widget.RecyclerView
+        <android.support.v7.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/course_list"
         android:layout_marginLeft="15.7dp"
         android:layout_marginRight="15.7dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@+id/landingcourses">
 
     </android.support.v7.widget.RecyclerView>

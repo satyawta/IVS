@@ -33,25 +33,25 @@
             </intent-filter>
         </activity>
         <activity android:name=".about_ivs"/>
-        <activity android:name=".onboarding_slider" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name="course_teacher_video_lock"/>
         <activity android:name=".OnboardingFragment1"/>
         <activity android:name=".OnboardingFragment2"/>
         <activity android:name=".OnboardingFragment3"/>
         <activity android:name=".Login" android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".landingscreen"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/app_name"></activity>
-        <activity android:name=".teacher_profile" ></activity>
-        <activity android:name=".teacher_pay_course" ></activity>
-        <activity android:name=".payment_successful" />
-        <activity android:name=".payment" />
-        <activity android:name=".payment_teacher_videos" />
-        <activity android:name=".payment_unsuccessful" />
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".teacher_profile" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".teacher_pay_course" android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".payment_successful" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".payment" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".payment_teacher_videos" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".payment_unsuccessful" android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".payment_teacher_course" />
         <activity android:name=".reset_password_email" />
         <activity android:name=".reset_password" />
         <activity android:name=".login_successful" />
         <activity android:name=".forget_password" />
+        <activity android:name=".user_profile" android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

@@ -5,15 +5,23 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -65,7 +73,7 @@ import okhttp3.Response;
 /*30:D7:F2:39:17:E4:A3:85:7C:33:14:7C:C5:7E:BA:1D:48:5B:76:B0
 
         AIzaSyAWPApjHydbWnVkTVNXuIJ0lOPwKFg2QZQ*/
-public class payment_teacher_videos extends AppCompatActivity  {
+public class payment_teacher_videos extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     String vidAddress = "https://player.vimeo.com/external/230901816.hd.mp4?s=57e7b343a87f006b4f8bd781ea56f54dc09ee9b9&profile_id=174";
     String vidAddress2 = "https://player.vimeo.com/external/230900892.hd.mp4?s=94918feec344ce9a0504482b874663d312a3a371&profile_id=174";
     private List<video_model> videos=new ArrayList<video_model>();
@@ -85,10 +93,27 @@ public class payment_teacher_videos extends AppCompatActivity  {
 
     private ProgressDialog pDialog;
 
+    private NavigationView navigationView;
+    protected DrawerLayout drawer;
+    private android.support.v7.widget.Toolbar toolbar;
+
+    private Button aboutBtn,videoBtn;
+    View videoView ;
+    RelativeLayout aboutView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.payment_teacher_video);
+        setContentView(R.layout.payment_teacher_video_nav);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        drawer = findViewById(R.id.navigationView);
+
+        aboutBtn =(Button) findViewById(R.id.about);
+        videoBtn =(Button) findViewById(R.id.videos);
+
+        videoView = findViewById(R.id.videoview);
+        aboutView = (RelativeLayout)findViewById(R.id.aboutview);
         video=new ArrayList<>();
 
         mAdapter = new RecyclerviewCourses(modelList,this);
@@ -131,8 +156,45 @@ public class payment_teacher_videos extends AppCompatActivity  {
 //        });
 
         //getData();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+
+        toggle.syncState();
+
+
+        navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        View header=navigationView.getHeaderView(0);
+        TextView profile=header.findViewById(R.id.profile_view);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),user_profile.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
+    public void aboutBtn(View view)
+    {
+        aboutBtn.setBackgroundResource(R.drawable.my_button_bg);
+        videoBtn.setBackgroundColor(getResources().getColor(R.color.white));
+
+        aboutView.setVisibility(View.VISIBLE);
+        videoView.setVisibility(View.INVISIBLE);
+    }
+
+    public void videoBtn(View view)
+    {
+        videoBtn.setBackgroundResource(R.drawable.my_button_bg);
+        aboutBtn.setBackgroundColor(getResources().getColor(R.color.white));
+
+        videoView.setVisibility(View.VISIBLE);
+        aboutView.setVisibility(View.INVISIBLE);
+
+    }
     private void getData() {
         NetworkClass.get("http://indianvedicschool.com/apis/get_courses.php", new Callback() {
             @Override
@@ -163,6 +225,34 @@ public class payment_teacher_videos extends AppCompatActivity  {
 
             }
         });
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.payment) {
+            Toast.makeText(getApplicationContext(), "Payment is clicked", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.about) {
+            Toast.makeText(getApplicationContext(), "About is clicked", Toast.LENGTH_SHORT).show();
+
+        } else if (id == R.id.contact) {
+            Toast.makeText(getApplicationContext(), "Contact is clicked", Toast.LENGTH_SHORT).show();
+        }
+
+        drawer = findViewById(R.id.navigationView);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        drawer = findViewById(R.id.navigationView);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 /*
     @Override

@@ -5,10 +5,17 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" />
     <!--   <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="match_parent">-->
-    <LinearLayout  android:background="#ffffff"
+    <LinearLayout
+        android:background="#ffffff"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="240dp">
@@ -28,18 +35,33 @@
             android:background="#ffffff"
             android:layout_weight="0.5"
             android:id="@+id/about"
+            android:onClick="aboutBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="About"/>
         <Button
+            android:id="@+id/videos"
             android:background="@drawable/my_button_bg"
             android:text="Videos"
             android:layout_weight="0.5"
+            android:onClick="videoBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <include layout="@layout/video_card_view"/>
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/aboutview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+    <include
+        android:id="@+id/videoview"
+        android:visibility="invisible"
+        layout="@layout/video_card_view"/>
+
+
     <!--<android.support.v7.widget.RecyclerView
         android:id="@+id/videos_list"
         android:layout_width="match_parent"
