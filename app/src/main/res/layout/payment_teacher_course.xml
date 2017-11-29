@@ -339,12 +339,12 @@
                     android:id="@+id/rating_reviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/teacher_profile_ratingview_top"
-                    android:layout_marginLeft="27.3dp"
+                    android:layout_alignLeft="@+id/about_course_desc"
+                    android:layout_alignStart="@+id/about_course_desc"
+                    android:layout_alignTop="@+id/teacher_profile_ratingview_top"
                     android:text="@string/ratings_reviews"
                     android:textColor="#252525"
-                    android:textSize="15.5sp"
-                    android:layout_marginStart="27.3dp" />
+                    android:textSize="15.5sp" />
 
                 <TextView
                     android:id="@+id/write_review"
@@ -381,14 +381,16 @@
                     android:textSize="25.1sp" />
 
                 <RatingBar
-                    android:layout_width="wrap_content"
                     android:id="@+id/ratingbar"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/reviews_count"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/rating_reviews"
                     android:layout_marginTop="8dp"
                     android:numStars="5"
-                    android:stepSize="1.0"
                     android:rating="3"
+                    android:stepSize="1.0"
                     android:theme="@style/RatingBar" />
 
                 <View
@@ -436,9 +438,6 @@
                     android:id="@+id/ratingbar_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/ratingbar"
-                    android:layout_alignStart="@+id/ratingbar"
-                    android:layout_alignTop="@+id/review_no_rating"
                     android:numStars="5"
                     android:rating="3"
                     android:stepSize="1.0"
@@ -519,17 +518,7 @@
                     android:textColor="#252525"
                     android:textSize="12.7sp" />
 
-                <RatingBar
-                    android:id="@+id/ratingbar_review_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/ratingbar"
-                    android:layout_alignStart="@+id/ratingbar"
-                    android:layout_alignTop="@+id/review_no_rating_1"
-                    android:numStars="5"
-                    android:rating="3"
-                    android:stepSize="1.0"
-                    android:theme="@style/RatingBar" />
+
 
                 <TextView
                     android:id="@+id/date_review_1"
@@ -559,7 +548,7 @@
                     android:layout_marginEnd="29dp"
                     android:id="@+id/textView2" />-->
 
-                <TextView
+               <!-- <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12sp"
@@ -573,16 +562,21 @@
                     android:paddingBottom="24.3dp"
                     android:layout_marginStart="83.7dp"
                     android:layout_marginEnd="29dp"
-                    android:id="@+id/textView3" />
-            </RelativeLayout>
-            <android.support.v7.widget.RecyclerView
-                android:visibility="invisible"
-                android:layout_below="@+id/layout_tab_pay_course"
-                android:id="@+id/recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                    android:id="@+id/textView3" />-->
 
-            </android.support.v7.widget.RecyclerView>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/teacher_profile_ratingview_top"
+                    android:layout_alignEnd="@+id/about_course_desc"
+                    android:layout_alignRight="@+id/about_course_desc"
+                    android:layout_marginBottom="50dp"
+                    android:visibility="invisible">
+
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+
         </RelativeLayout>
     </ScrollView>
 
